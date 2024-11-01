@@ -2,12 +2,18 @@ import { useState } from 'react';
 import shootLogo from '../../assets/shootLogo.png';
 import ConnectFigma from './components/ConnectFigma';
 import SignupMain from './components/SignupMain';
+import ConnectDiscord from './components/ConnectDiscord';
 
 const SignupPage = () => {
     const [isSignupMainVisible, setIsSignupMainVisible] = useState(true);
+    const [isConnectFigma, setIsConnectFigma] = useState(true);
 
-    const handleButtonClick = () => {
+    const handleSignupButtonClick = () => {
         setIsSignupMainVisible(false);
+    };
+
+    const handleConnectFigmaButtonClick = () => {
+        setIsConnectFigma(false);
     };
 
     return (
@@ -18,9 +24,13 @@ const SignupPage = () => {
                 style={{ width: "315px", height: "66.23px" }} 
             />
             {isSignupMainVisible ? (
-                <SignupMain onButtonClick={handleButtonClick} />
+                <SignupMain onButtonClick={handleSignupButtonClick} />
             ) : (
-                <ConnectFigma />
+                isConnectFigma ? (
+                    <ConnectFigma onButtonClick={handleConnectFigmaButtonClick} />
+                ) : (
+                    <ConnectDiscord />
+                )
             )}
         </div>
     );
