@@ -1,7 +1,7 @@
 import shootLogo from '../assets/shootLogo.png';
-import colors from '../styles/color';
+import colors from '../../styles/color';
 
-const LoginPage = () => {
+const SignupPage = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen">
             <img 
@@ -25,4 +25,4 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default SignupPage;
