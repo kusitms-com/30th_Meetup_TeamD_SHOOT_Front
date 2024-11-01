@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import shootLogo from '../assets/shootLogo.png';
 import colors from '../styles/color';
-import typography from '../styles/typograghy';
+import typography from '../styles/typography';
 import googleLogo from '../assets/googleLogo.png';
 
 const LoginPage = () => {

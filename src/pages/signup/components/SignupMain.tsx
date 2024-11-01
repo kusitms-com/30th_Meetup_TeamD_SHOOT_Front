@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import colors from '../../../styles/color';
-import typography from '../../../styles/typograghy';
+import typography from '../../../styles/typography';
 import googleLogo from '../../../assets/googleLogo.png';
 
 interface SignupMainProps {
@@ -12,7 +12,7 @@ const SignupMain: React.FC<SignupMainProps> = ({ onButtonClick }) => {
         <div className='flex flex-col mt-[15.54px] w-[494px]'>
             <div style={typography.title.medium}>Sign in to your account</div>
             <button 
-                className="flex items-center justify-center mt-[12px] gap-[8px]"
+                className="flex items-center justify-center mt-[12px] gap-[8px] gradient-border"
                 onClick={onButtonClick}
                 style={{ 
                     width: '100%', 

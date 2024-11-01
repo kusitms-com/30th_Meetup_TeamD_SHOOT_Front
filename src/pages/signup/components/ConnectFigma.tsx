@@ -1,6 +1,5 @@
-import React from 'react';
 import colors from '../../../styles/color';
-import typography from '../../../styles/typograghy';
+import typography from '../../../styles/typography';
 
 const ConnectFigma = () => {
     return (
