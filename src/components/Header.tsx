@@ -1,5 +1,4 @@
-import React from "react";
-import ShootLogo from "../assets/shoot_logo1.png";
+import ShootLogo from "../assets/shootLogo.png";
 
 const Header = () => {
     return (

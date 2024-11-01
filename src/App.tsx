@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
+import LoginPage from './pages/LoginPage';
 
 const App = () => {
   return (
-    <div>
-      <Header />
-    </div>
+    <>
+      <LoginPage />
+    </>
   );
 };
 
