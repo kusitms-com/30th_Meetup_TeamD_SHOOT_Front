@@ -23,7 +23,7 @@ const LoginPage = () => {
                         ...typography.title.small
                     }}
                 >
-                    <img src={googleLogo} alt='googleLogo' style={{ width: '24px', height: '24px' }} />
+                    <img src={googleLogo} alt='googleLogo' style={{ width: '24px', height: '24px', top: '300px' }} />
                     <span style={typography.title.small}>Continue With Google</span>
                 </button>
                 <div className='flex flex-col items-center justify-center'>

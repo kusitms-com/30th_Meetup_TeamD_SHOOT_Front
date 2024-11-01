@@ -21,7 +21,7 @@ const SignupPage = () => {
             <img 
                 src={shootLogo} 
                 alt="shootLogo" 
-                style={{ width: "315px", height: "66.23px" }} 
+                style={{ width: "315px", height: "66.23px" , top: '300px'}} 
             />
             {isSignupMainVisible ? (
                 <SignupMain onButtonClick={handleSignupButtonClick} />
