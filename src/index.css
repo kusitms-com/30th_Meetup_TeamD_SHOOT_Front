@@ -71,3 +71,9 @@ button:focus-visible {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* src/index.css */
+body {
+  background-color: black;
+  color: white; /* 글자색이 검정 배경에서 잘 보이도록 흰색으로 설정 */
+}
