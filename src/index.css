@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* width: vw; */
 }
 
 a {
@@ -24,10 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -65,4 +62,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+body {
+  background-color: black;
+  color: white; /* 글자색이 검정 배경에서 잘 보이도록 흰색으로 설정 */
 }
