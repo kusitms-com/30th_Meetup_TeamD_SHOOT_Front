@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import shootMain from '../../assets/shootMain.gif';
 import shoot1st from '../../assets/shootFIRST.json';
 import shoot2nd from '../../assets/shootSECOND.json';
+import shoot3rd from '../../assets/shootTHIRD.json';
+import shoot4th from '../../assets/shootFORTH.json';
+import shoot5th from '../../assets/shootFIFTH.json';
+import shoot6th from '../../assets/shootSIXTHgif.gif';
 import Lottie from 'lottie-react';
 
 const MainPage = () => {
@@ -46,7 +50,7 @@ const MainPage = () => {
 
             {/** 구역 1 */}
             <div>
-                <div className="mt-[156px] text-center text-white text-[40px] font-bold font-['Pretendard'] leading-[60px]">
+                <div className="mt-[156px] mb-[91.64px] text-center text-white text-[40px] font-bold font-['Pretendard'] leading-[60px]">
                     Manage your frame and comment efficiently
                 </div>
 
@@ -90,6 +94,103 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>    
+
+            {/** 구역 2 */}
+            <div className='mt-[156px] mb-[192px]'>
+                <div className="text-center text-white text-[40px] font-bold font-['Pretendard'] leading-[60px]">
+                    Sync with your team, 
+                    <br/>stay updated on every comment
+                </div>
+
+                {/** Row 정렬 */}
+                <div className="flex flex-row mt-[285px] relative">
+                    {/** 왼쪽 세로*/}
+                    <div className="mt-[258px] w-[559px] text-Grayscale_0 text-[40px] font-bold font-['Pretendard'] uppercase leading-[60px] tracking-tight">
+                        Stay connected   
+                        <br/>with team messenger
+                        <br/>Integrations and 
+                        <br/>receive real-time 
+                        <br/>notifications
+                    </div>
+                    
+                    {/** 구분선 - 스크롤 시 높이 변경 */}
+                    <div className="mt-[414px] ml-[70px] mr-[58px] flex flex-col items-center">
+                        {/* 상단 점 */}
+                        <div className="w-2.5 h-2.5 bg-[#6effd9] rounded-full" />
+                    </div>
+
+                    {/** 오른쪽 세로 */}
+                    <div className="mt-[93px]">
+                        <Lottie animationData={shoot3rd} loop={true}/>
+                    </div>
+                </div>
+            </div>    
+
+            {/** 구역 3 */}
+            <div className='mt-[100px] mb-[101px]'>
+                <div className="text-center text-white text-[40px] font-bold font-['Pretendard'] leading-[60px]">
+                    Manage any requests directly 
+                    <br/>through your own TODO List
+                </div>
+
+                {/** Row 정렬 */}
+                <div className="flex flex-row mt-[285px] relative">
+                    {/** 왼쪽 세로*/}
+                    <div className='flex flex-col mt-[189px]'>
+                        <Lottie animationData={shoot4th} loop={true}/>
+                        <div className="mt-[336px] text-Grayscale_0 text-[40px] font-bold font-['Pretendard'] uppercase leading-[60px] tracking-tight">
+                            Track your tasks   
+                            <br/>efficiently
+                            <br/>with 'yet-DOING-done' 
+                            <br/>status management
+                        </div>
+                        <div className="mt-[276px]">
+                            <img src={shoot6th}/>
+                        </div>
+                    </div>
+                   
+                    
+                    {/** 구분선 - 스크롤 시 높이 변경 */}
+                    <div className="mt-[414px] ml-[70px] mr-[58px] flex flex-col items-center">
+                        {/* 상단 점 */}
+                        <div className="w-2.5 h-2.5 bg-[#6effd9] rounded-full" />
+                        <div className="mt-[630px] w-2.5 h-2.5 bg-[#6effd9] rounded-full" />
+                        <div className="mt-[630px] w-2.5 h-2.5 bg-[#6effd9] rounded-full" />
+                    </div>
+
+                    {/** 오른쪽 세로 */}
+                    <div className='flex flex-col mt-[350px]'>
+                        <div className="text-Grayscale_0 text-[40px] font-bold font-['Pretendard'] uppercase leading-[60px] tracking-tight">
+                            Turn any request 
+                            <br/>into a to-do 
+                            <br/>with just one click
+                        </div>
+                        <div className="mt-[332px]">
+                            <Lottie animationData={shoot5th} loop={true}/>
+                        </div>
+                        <div className="mt-[335.64px] text-Grayscale_0 text-[40px] font-bold font-['Pretendard'] uppercase leading-[60px] tracking-tight">
+                            View mentioned 
+                            <br/>comments in one place
+                            <br/>for quick access
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            {/* 마지막 텍스트 */}
+            <div className='mt-[155px] mb-[155px]'>
+                <div className=" text-white text-[50px] font-bold font-['Pretendard'] leading-[75px] tracking-wide text-center">
+                    SHOOT YOUR CREATIVE OUTPUT
+                </div>
+                <div className='mt-[74px] justify-center items-center gap-2.5 flex'>
+                    <button className=" h-[61px] p-4 rounded-[10px] border border-[#6effd9] ">
+                        <span className="w-[120.72px] text-center text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7">
+                            SIGN IN
+                        </span>
+                    </button>
+                </div>
+            </div>
+            
         </div>
     );
 };
