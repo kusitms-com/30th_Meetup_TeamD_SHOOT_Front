@@ -2,7 +2,7 @@ import ShootLogo from "../assets/shootLogo.png";
 
 const Header = () => {
     return (
-        <div className="fixed top-0 flex items-center justify-between w-full h-20 border-b border-white">
+        <div className="fixed top-0 z-50 flex items-center justify-between w-full h-20 bg-black border-b border-white"> {/* z-50을 추가하여 우선순위 설정 */}
             <div className="flex items-center ml-[320px]">
                 <img src={ShootLogo} alt="Shoot Logo" style={{ width: "122.111px", height: "25.674px" }} />
             </div>
