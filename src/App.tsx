@@ -1,8 +1,8 @@
 // App.tsx
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/signup/SignupPage';
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import LoginPage from './pages/LoginPage';
+// import SignupPage from './pages/signup/SignupPage';
 import MainPage from './pages/main/MainPage';
 
 
