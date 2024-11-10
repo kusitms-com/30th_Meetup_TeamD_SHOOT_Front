@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import shootMain from '../../assets/shootMain.gif';
 import shoot1st from '../../assets/shootFIRST.json';
 import shoot2nd from '../../assets/shootSECOND.json';
@@ -7,6 +7,7 @@ import shoot4th from '../../assets/shootFORTH.json';
 import shoot5th from '../../assets/shootFIFTH.json';
 import shoot6th from '../../assets/shootSIXTHgif.gif';
 import Lottie from 'lottie-react';
+import { Link } from 'react-router-dom';
 
 const MainPage = () => {
     const [lineHeight, setLineHeight] = useState(0);
@@ -182,13 +183,15 @@ const MainPage = () => {
                 <div className=" text-white text-[50px] font-bold font-['Pretendard'] leading-[75px] tracking-wide text-center">
                     SHOOT YOUR CREATIVE OUTPUT
                 </div>
-                <div className='mt-[74px] justify-center items-center gap-2.5 flex'>
-                    <button className=" h-[61px] p-4 rounded-[10px] border border-[#6effd9] ">
-                        <span className="w-[120.72px] text-center text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7">
-                            SIGN IN
-                        </span>
-                    </button>
-                </div>
+                <Link to="/signin" className="ml-1 underline">
+                    <div className='mt-[74px] justify-center items-center gap-2.5 flex'>
+                        <div className=" h-[61px] p-4 rounded-[10px] border border-[#6effd9] ">
+                            <span className="w-[120.72px] text-center text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7">
+                                SIGN IN 
+                            </span>
+                        </div>
+                    </div>
+                </Link>
             </div>
             
         </div>
