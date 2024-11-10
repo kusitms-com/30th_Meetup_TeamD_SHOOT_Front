@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import shootMain from '../../assets/shootMain.gif';
 import shoot1st from '../../assets/shootFIRST.json';
 import shoot2nd from '../../assets/shootSECOND.json';
@@ -7,7 +8,6 @@ import shoot4th from '../../assets/shootFORTH.json';
 import shoot5th from '../../assets/shootFIFTH.json';
 import shoot6th from '../../assets/shootSIXTHgif.gif';
 import Lottie from 'lottie-react';
-import { Link } from 'react-router-dom';
 
 const MainPage = () => {
     const [lineHeight, setLineHeight] = useState(0);
@@ -25,6 +25,7 @@ const MainPage = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
     return (
         <div className="relative flex flex-col top-[250px] items-center justify-center w-full">
             {/* 헤드라인 텍스트 */}
@@ -40,14 +41,18 @@ const MainPage = () => {
             </div>
 
             {/* 회원가입 버튼 */}
-            <div className="mt-[70px] h-[61px] p-4 rounded-[10px] border border-[#6effd9] flex justify-center items-center gap-2.5 cursor-pointer">
-                <div className="text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7 text-center">
-                    SIGN IN
+            <Link to='signin'>
+                <div className="mt-[70px] h-[61px] p-4 rounded-[10px] border border-[#6effd9] flex justify-center items-center gap-2.5 cursor-pointer">
+                    <div className="text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7 text-center">
+                        SIGN IN
+                    </div>
                 </div>
-            </div>
+            </Link>
+            
 
             {/* 메인 이미지 */}
             <img className="mt-[62px] w-[1293px] h-[697px]" src={shootMain} alt="Main illustration for the Shoot project" />
+            ㅔ갸ㅜ
 
             {/** 구역 1 */}
             <div>
@@ -183,15 +188,15 @@ const MainPage = () => {
                 <div className=" text-white text-[50px] font-bold font-['Pretendard'] leading-[75px] tracking-wide text-center">
                     SHOOT YOUR CREATIVE OUTPUT
                 </div>
-                <Link to="/signin" className="ml-1 underline">
-                    <div className='mt-[74px] justify-center items-center gap-2.5 flex'>
-                        <div className=" h-[61px] p-4 rounded-[10px] border border-[#6effd9] ">
+                <div className='mt-[74px] justify-center items-center gap-2.5 flex'>
+                    <Link to='signin'>
+                        <button className=" h-[61px] p-4 rounded-[10px] border border-[#6effd9] ">
                             <span className="w-[120.72px] text-center text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7">
-                                SIGN IN 
+                                SIGN IN
                             </span>
-                        </div>
-                    </div>
-                </Link>
+                        </button>
+                    </Link>
+                </div>
             </div>
             
         </div>

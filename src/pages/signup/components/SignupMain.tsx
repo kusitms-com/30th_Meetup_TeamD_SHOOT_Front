@@ -27,7 +27,7 @@ const SignupMain: React.FC<SignupMainProps> = ({ onButtonClick }) => {
             <div className='flex flex-col items-center justify-center'>
                 <div className='mt-[16px]'>
                     Already have an account?
-                    <Link to="/" className="ml-1 underline">
+                    <Link to="/signin" className="ml-1 underline">
                         Sign In
                     </Link>
                 </div>

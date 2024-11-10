@@ -11,9 +11,12 @@ const Header = () => {
             </Link>
             
             <div className="flex items-center gap-12 mr-[320px]">
-                <div className="relative w-16 h-8">
-                    <button className="left-[4px] top-[3px] absolute text-white text-base font-semibold font-['Pretendard'] leading-relaxed">LOG IN</button>
-                </div>
+                <Link to='signin'>
+                    <div className="relative w-16 h-8">
+                        <button className="left-[4px] top-[3px] absolute text-white text-base font-semibold font-['Pretendard'] leading-relaxed">LOG IN</button>
+                    </div>
+                </Link>
+               
                 <button className="px-10 py-2.5 bg-[#20f5bd] rounded-md justify-center items-center gap-2.5 flex">
                     <div className="text-center text-[#1d1e1e] text-base font-bold font-['Pretendard'] leading-relaxed">FIGMA PLUGIN</div>
                 </button>
