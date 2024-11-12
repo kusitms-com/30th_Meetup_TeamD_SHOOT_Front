@@ -4,9 +4,7 @@ import shootLogo from '../assets/shootLogo.png';
 import colors from '../styles/color';
 import typography from '../styles/typography';
 import googleLogo from '../assets/googleLogo.png';
-import LoginButton from './LoginButton';
-import { useGoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
-import axios from "axios";
+// import { useGoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 
 const LoginPage = () => {
     // // Google OAuth URL

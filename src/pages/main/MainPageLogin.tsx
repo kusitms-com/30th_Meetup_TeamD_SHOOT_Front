@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import shootMain from '../../assets/shootMain.gif';
 import shoot1st from '../../assets/shootFIRST.json';
 import shoot2nd from '../../assets/shootSECOND.json';

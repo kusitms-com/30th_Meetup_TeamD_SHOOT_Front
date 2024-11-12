@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import shootMain from '../../assets/shootMain.gif';
 import shoot1st from '../../assets/shootFIRST.json';
 import shoot2nd from '../../assets/shootSECOND.json';
@@ -52,7 +52,6 @@ const MainPage = () => {
 
             {/* 메인 이미지 */}
             <img className="mt-[62px] w-[1293px] h-[697px]" src={shootMain} alt="Main illustration for the Shoot project" />
-            ㅔ갸ㅜ
 
             {/** 구역 1 */}
             <div>
