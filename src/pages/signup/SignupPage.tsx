@@ -5,6 +5,7 @@ import SignupMain from './components/SignupMain';
 import ConnectDiscord from './components/ConnectDiscord';
 
 const SignupPage = () => {
+    
     const [isSignupMainVisible, setIsSignupMainVisible] = useState(true);
     const [isConnectFigma, setIsConnectFigma] = useState(true);
 
