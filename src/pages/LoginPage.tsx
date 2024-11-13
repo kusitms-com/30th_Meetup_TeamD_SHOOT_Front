@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import shootLogo from '../assets/shootLogo.png';
 import colors from '../styles/color';
@@ -19,7 +18,7 @@ const LoginPage = () => {
         <div className="flex flex-col items-center justify-center w-full h-screen">
             <img 
                 src={shootLogo} 
-                alt="shootLogo" 
+                alt="shootLogo"
                 style={{ width: "315px", height: "66.23px" }} 
             />
             <div className='flex flex-col mt-[15.54px] w-[494px]' >
