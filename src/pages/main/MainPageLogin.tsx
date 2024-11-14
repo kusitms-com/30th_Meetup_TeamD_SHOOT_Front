@@ -11,11 +11,9 @@ import { Link } from 'react-router-dom';
 
 const MainPageLogin = () => {
     const [lineHeight, setLineHeight] = useState(0);
-
-    // 스크롤에 따라 선의 높이를 업데이트하는 함수
+    
     const handleScroll = () => {
         const scrollY = window.scrollY;
-        // 스크롤 위치에 따라 선의 높이를 변경 (조정 가능)
         const newHeight = Math.min(scrollY - 100, 408); 
         setLineHeight(newHeight);
     };

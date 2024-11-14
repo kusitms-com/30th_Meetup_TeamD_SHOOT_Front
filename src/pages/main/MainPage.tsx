@@ -150,7 +150,7 @@ const MainPage = () => {
                             <br/>status management
                         </div>
                         <div className="mt-[276px]">
-                            <img src={shoot6th} style={{ borderRadius: 24, width: '100%', height: '100%' }}/>
+                            <img src={shoot6th}/>
                         </div>
                     </div>
                    
@@ -171,7 +171,7 @@ const MainPage = () => {
                             <br/>with just one click
                         </div>
                         <div className="mt-[332px]">
-                            <Lottie animationData={shoot5th} loop={true} />
+                            <Lottie animationData={shoot5th} loop={true}/>
                         </div>
                         <div className="mt-[335.64px] text-Grayscale_0 text-[40px] font-bold font-['Pretendard'] uppercase leading-[60px] tracking-tight">
                             View mentioned 
