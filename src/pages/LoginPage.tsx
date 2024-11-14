@@ -1,12 +1,11 @@
 // src/pages/LoginPage.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import shootLogo from '../assets/shootLogo.png';
-import colors from '../styles/color';
+// import colors from '../styles/color';
 import typography from '../styles/typography';
-import googleLogo from '../assets/googleLogo.png';
-import { onLogInSuccess } from '../services/authService';
+// import googleLogo from '../assets/googleLogo.png';
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 
