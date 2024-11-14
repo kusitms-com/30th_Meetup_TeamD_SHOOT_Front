@@ -10,6 +10,7 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/signin" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
+            {/* <Route path="/oauth" element={<OAuthCallback />} /> OAuthCallback 경로 */}
         </Routes>
     );
 };
