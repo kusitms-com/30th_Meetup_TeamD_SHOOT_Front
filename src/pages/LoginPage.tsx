@@ -10,6 +10,7 @@ import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 
 const LoginPage: React.FC = () => {
+    
     // 구글 로그인 성공 시 콜백 함수
     const handleGoogleSuccess = async (credential: string) => {
         try {
