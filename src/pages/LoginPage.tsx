@@ -1,50 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import shootLogo from '../assets/shootLogo.png';
 import typography from '../styles/typography';
-import { GoogleLogin } from '@react-oauth/google';
-import {jwtDecode} from 'jwt-decode';
+import { useGoogleLogin } from '@react-oauth/google';
 
 const LoginPage: React.FC = () => {
-<<<<<<< Updated upstream
-    // 구글 로그인 성공 시 콜백 함수
-=======
-    const [accessToken, setAccessToken] = useState<string | null>(null);
-
-    // 백엔드로 GET 요청 전송
-    const sendAccessTokenToBackend = async (token: string) => {
+    const sendCodeToBackend = async (code: string) => {
         try {
-            const response = await axios.get('/api/v1/auth/code/google', {
-                params: { code: token },
-                headers: { 'Content-Type': 'application/json' },
-            });
+            const response = await axios.get(
+                '/api/v1/auth/code/google'+
+                { code } // Authorization Code
+            );
             console.log("백엔드 응답:", response.data);
         } catch (error) {
             console.error("백엔드 요청 중 오류 발생:", error);
         }
     };
 
-    // Google 로그인 성공 처리 함수
->>>>>>> Stashed changes
-    const handleGoogleSuccess = async (credential: string) => {
-        try {
-            // JWT 디코딩
-            const decodedToken: any = jwtDecode(credential);
-            console.log("Decoded Token:", decodedToken);
-
-            // accessToken이 존재하면 백엔드로 전송
-            if (credential) {
-                await sendAccessTokenToBackend(credential);
-            } else {
-                console.error("access_token이 존재하지 않습니다.");
-                
-            }
-            
-        } catch (error) {
-            console.error("Google 로그인 처리 중 오류 발생:", error);
-        }
-    };
+    const login = useGoogleLogin({
+        onSuccess: async (codeResponse) => {
+            console.log("Authorization Code:", codeResponse.code);
+            await sendCodeToBackend(codeResponse.code); // 백엔드로 Authorization Code 전송
+        },
+        onError: () => {
+            console.error("Google 로그인 실패");
+        },
+        flow: 'auth-code', // Authorization Code Flow 설정
+    });
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen">
@@ -57,19 +40,12 @@ const LoginPage: React.FC = () => {
                 <div style={typography.title.medium}>Sign in to your account</div>
                 
                 {/* Google Login 버튼 */}
-                <GoogleLogin
-                    onSuccess={credentialResponse => {
-                        if (credentialResponse.credential) {
-                            handleGoogleSuccess(credentialResponse.credential);
-                            console.log("Credential:", credentialResponse.credential);
-                        } else {
-                            console.error("Google 인증 실패");
-                        }
-                    }}
-                    onError={() => {
-                        console.error("Google 로그인 실패");
-                    }}
-                />
+                <button
+                    onClick={() => login()}
+                    className="px-4 py-2 mt-4 text-white bg-blue-500 rounded"
+                >
+                    Sign in with Google 🚀
+                </button>
                 
                 <div className="flex flex-col items-center justify-center">
                     <div className="mt-[16px]">
