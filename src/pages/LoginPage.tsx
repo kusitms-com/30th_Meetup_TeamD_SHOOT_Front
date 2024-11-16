@@ -1,28 +1,48 @@
-// src/pages/LoginPage.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import shootLogo from '../assets/shootLogo.png';
-import colors from '../styles/color';
 import typography from '../styles/typography';
-import googleLogo from '../assets/googleLogo.png';
 import { GoogleLogin } from '@react-oauth/google';
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from 'jwt-decode';
 
 const LoginPage: React.FC = () => {
+<<<<<<< Updated upstream
     // 구글 로그인 성공 시 콜백 함수
+=======
+    const [accessToken, setAccessToken] = useState<string | null>(null);
+
+    // 백엔드로 GET 요청 전송
+    const sendAccessTokenToBackend = async (token: string) => {
+        try {
+            const response = await axios.get('/api/v1/auth/code/google', {
+                params: { code: token },
+                headers: { 'Content-Type': 'application/json' },
+            });
+            console.log("백엔드 응답:", response.data);
+        } catch (error) {
+            console.error("백엔드 요청 중 오류 발생:", error);
+        }
+    };
+
+    // Google 로그인 성공 처리 함수
+>>>>>>> Stashed changes
     const handleGoogleSuccess = async (credential: string) => {
         try {
-            // JWT 토큰 디코딩
-            const decodedToken = jwtDecode(credential);
+            // JWT 디코딩
+            const decodedToken: any = jwtDecode(credential);
             console.log("Decoded Token:", decodedToken);
 
-            // 서버에 credential을 보내어 추가 인증 수행
-            const response = await axios.post('/api/v1/auth/code/google', { credential });
-            onLogInSuccess(response); // 받은 토큰 처리
-            console.log("로그인 성공:", response.data);
+            // accessToken이 존재하면 백엔드로 전송
+            if (credential) {
+                await sendAccessTokenToBackend(credential);
+            } else {
+                console.error("access_token이 존재하지 않습니다.");
+                
+            }
+            
         } catch (error) {
-            console.error("Google 로그인 실패:", error);
+            console.error("Google 로그인 처리 중 오류 발생:", error);
         }
     };
 
@@ -40,12 +60,10 @@ const LoginPage: React.FC = () => {
                 <GoogleLogin
                     onSuccess={credentialResponse => {
                         if (credentialResponse.credential) {
-                            // 성공적으로 받은 credential을 처리
                             handleGoogleSuccess(credentialResponse.credential);
-                            console.log(credentialResponse.credential);
-                            console.log(jwtDecode(credentialResponse.credential));
+                            console.log("Credential:", credentialResponse.credential);
                         } else {
-                            console.error("Google 인증에 실패했습니다.");
+                            console.error("Google 인증 실패");
                         }
                     }}
                     onError={() => {
@@ -67,8 +85,3 @@ const LoginPage: React.FC = () => {
 };
 
 export default LoginPage;
-
-function onLogInSuccess(_response: AxiosResponse<any, any>) {
-    throw new Error('Function not implemented.');
-}
-
