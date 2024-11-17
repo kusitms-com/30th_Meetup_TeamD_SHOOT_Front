@@ -8,11 +8,10 @@ import { useGoogleLogin } from '@react-oauth/google';
 const LoginPage: React.FC = () => {
     const sendCodeToBackend = async (code: string) => {
         try {
-            const response = await axios.get(
-                '/api/v1/auth/code/google'+
-                { code } // Authorization Code
-            );
-            console.log("백엔드 응답:", response.data);
+            const response = await axios.get('/api/v1/auth/code/google', {
+                params: { code }, // Authorization Code를 쿼리 파라미터로 전송
+            });
+            console.log("백엔드 응답:", response);
         } catch (error) {
             console.error("백엔드 요청 중 오류 발생:", error);
         }
