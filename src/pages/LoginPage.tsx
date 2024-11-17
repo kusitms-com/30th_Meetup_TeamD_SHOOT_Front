@@ -1,62 +1,50 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import instance from '../api/axiosInstance'; // Axios 인스턴스 사용
 import shootLogo from '../assets/shootLogo.png';
 import typography from '../styles/typography';
-import { useGoogleLogin } from '@react-oauth/google';
+import colors from '../styles/color';
 
 const LoginPage: React.FC = () => {
-    const sendCodeToBackend = async (code: string) => {
-        try {
-            const response = await axios.get('/api/v1/auth/code/google', {
-                params: { code }, // Authorization Code를 쿼리 파라미터로 전송
-            });
-            console.log("백엔드 응답:", response);
-        } catch (error) {
-            console.error("백엔드 요청 중 오류 발생:", error);
-        }
-    };
+    const navigate = useNavigate();
 
-    const login = useGoogleLogin({
-        onSuccess: async (codeResponse) => {
-            console.log("Authorization Code:", codeResponse.code);
-            await sendCodeToBackend(codeResponse.code); // 백엔드로 Authorization Code 전송
-        },
-        onError: () => {
-            console.error("Google 로그인 실패");
-        },
-        flow: 'auth-code', // Authorization Code Flow 설정
-    });
+  // Google 로그인 URL로 리디렉션
+  const handleGoogleLogin = () => {
+    window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=354662253053-amfnieo2m0ohp831hr6i0a1mhveidqp8.apps.googleusercontent.com&redirect_uri=http://localhost:5173/login&response_type=code&scope=openid email profile&access_type=offline'
+};
 
-    return (
-        <div className="flex flex-col items-center justify-center w-full h-screen">
-            <img 
-                src={shootLogo} 
-                alt="shootLogo"
-                style={{ width: "315px", height: "66.23px" }} 
-            />
-            <div className="flex flex-col mt-[15.54px] w-[494px]">
-                <div style={typography.title.medium}>Sign in to your account</div>
-                
-                {/* Google Login 버튼 */}
-                <button
-                    onClick={() => login()}
-                    className="px-4 py-2 mt-4 text-white bg-blue-500 rounded"
-                >
-                    Sign in with Google 🚀
-                </button>
-                
-                <div className="flex flex-col items-center justify-center">
-                    <div className="mt-[16px]">
-                        Don’t have an account yet?
-                        <Link to="/signup" className="ml-1 underline">
-                            Sign Up
-                        </Link>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="flex flex-col items-center justify-center w-full h-screen">
+      <img
+        src={shootLogo}
+        alt="shootLogo"
+        style={{ width: '315px', height: '66.23px' }}
+      />
+      <div className="flex flex-col mt-[15.54px] w-[494px]">
+        <div style={typography.title.medium}>Sign in to your account</div>
+        <button
+          onClick={handleGoogleLogin}
+          className="flex items-center justify-center mt-[12px] gap-[8px]"
+          style={{
+            width: '100%',
+            height: '53px',
+            backgroundColor: colors.grayscale[80],
+            ...typography.title.small,
+          }}
+        >
+          <span style={typography.title.small}>Continue With Google</span>
+        </button>
+        <div className="flex flex-col items-center justify-center">
+          <div className="mt-[16px]">
+            Don’t have an account yet?
+            <button className="ml-1 underline" onClick={() => navigate('/signup')}>
+              Sign Up
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default LoginPage;

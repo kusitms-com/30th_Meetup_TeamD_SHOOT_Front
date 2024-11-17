@@ -3,6 +3,7 @@ import {Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/signup/SignupPage';
 import MainPage from './pages/main/MainPage';
+import OAuthPage from './pages/OAuthPage';
 
 const App = () => {
     return (
@@ -10,7 +11,7 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/signin" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
-            {/* <Route path="/oauth" element={<OAuthCallback />} /> OAuthCallback 경로 */}
+            <Route path="/login" element={<OAuthPage />} />
         </Routes>
     );
 };
