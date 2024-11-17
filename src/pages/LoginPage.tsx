@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import instance from '../api/axiosInstance'; // Axios 인스턴스 사용
+// import instance from '../api/axiosInstance'; // Axios 인스턴스 사용
 import shootLogo from '../assets/shootLogo.png';
 import typography from '../styles/typography';
 import colors from '../styles/color';

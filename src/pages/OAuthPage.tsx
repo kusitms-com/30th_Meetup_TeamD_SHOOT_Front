@@ -22,13 +22,15 @@ const OAuthPage = () => {
           params: { code }, // 쿼리 파라미터로 코드 전달
           withCredentials: true
         });
-  
+
         console.log('로그인 성공:', response.data);
   
         // 토큰 저장
-        localStorage.setItem('accessToken', response.data.accessToken);
-        localStorage.setItem('refreshToken', response.data.refreshToken);
-  
+        localStorage.setItem('accessToken', response.data.data.accessToken);
+        console.log(response.data.data.accessToken);
+        localStorage.setItem('refreshToken', response.data.data.refreshToken);
+        console.log(response.data.data.refreshToken);
+
         // 메인 페이지로 이동
         navigate('/');
       } catch (error: any) {
@@ -53,7 +55,7 @@ const OAuthPage = () => {
   
     return (
         <div>
-            
+            {/** 200이 오면 바로 로그인 페이지로  */}
         </div>
     );
 };
