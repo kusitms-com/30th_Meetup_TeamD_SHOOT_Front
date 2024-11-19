@@ -60,10 +60,10 @@ const OAuthPage = () => {
     }
 
     try {
-      const userData = await fetchUserInfo(accessToken); // 사용자 정보 요청
+      const userData = await fetchUserInfo(accessToken);
       setUser({
         username: userData.username,
-        email: "", // 필요 시 email 추가
+        email: "",
         ImgUrl: userData.profileImg,
         userId: userData.userId,
       });
