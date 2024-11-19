@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import shootMain from '../../assets/shootMain.gif';
 import shoot1st from '../../assets/shootFIRST.json';
 import shoot2nd from '../../assets/shootSECOND.json';
@@ -11,6 +11,7 @@ import Lottie from 'lottie-react';
 
 const MainPage = () => {
     const [lineHeight, setLineHeight] = useState(0);
+    // const [isLogined, setIsLogined] = useState(false);
 
     // 스크롤에 따라 선의 높이를 업데이트하는 함수
     const handleScroll = () => {
