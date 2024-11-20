@@ -1,12 +1,10 @@
 // App.tsx
 import {Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/signup/SignupPage';
+import SignupPage from './pages/SignupPage';
 import MainPage from './pages/MainPage';
 import OAuthPage from './pages/OAuthPage';
-import ProfilePage from './pages/ProfilePage';
-
-
+import UserPage from './pages/UserPage';
 
 const App = () => {
     return (
@@ -16,7 +14,7 @@ const App = () => {
             <Route path="/signin" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/login" element={<OAuthPage />} />
-            <Route path="/profile" element={<ProfilePage/>} />
+            <Route path="/user" element={<UserPage/>} />
         </Routes>
         </div>
 
