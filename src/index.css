@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 기본세팅 */
 body {
   background-color: black;
   color: white;

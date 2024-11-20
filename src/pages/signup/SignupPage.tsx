@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import shootLogo from '../../assets/shootLogo.png';
+import shootLogo from '../../assets/shoot/shootLogo.png';
 import ConnectFigma from './components/ConnectFigma';
 import SignupMain from './components/SignupMain';
 import ConnectDiscord from './components/ConnectDiscord';

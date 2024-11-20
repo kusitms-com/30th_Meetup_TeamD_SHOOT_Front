@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import ShootLogo from "../assets/shootLogo.png";
+import ShootLogo from "../assets/shoot/shootLogo.png";
 import useUserStore from "../store/UserStore";
 
 const Header = () => {
-  // 사용자 정보 가져오기
   const { username, ImgUrl, userId } = useUserStore();
 
   return (
@@ -25,7 +24,6 @@ const Header = () => {
             <span className="text-white">{username}</span>
           </div>
         ) : (
-          // 로그인되지 않은 경우 "LOG IN" 버튼
           <div className="relative w-16 h-8">
             <Link to="signin">
               <button className="left-[4px] top-[3px] absolute text-white text-base font-semibold font-['Pretendard'] leading-relaxed">

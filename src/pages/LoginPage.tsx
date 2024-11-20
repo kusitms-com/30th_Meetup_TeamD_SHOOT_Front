@@ -1,13 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// import instance from '../api/axiosInstance'; // Axios 인스턴스 사용
-import shootLogo from '../assets/shootLogo.png';
+import googleLogo from '../assets/logo/googleLogo.png';
+import shootLogo from '../assets/shoot/shootLogo.png';
 import typography from '../styles/typography';
 import colors from '../styles/color';
 
 const LoginPage: React.FC = () => {
     const navigate = useNavigate();
-
 
     // Google 로그인 URL로 리디렉션
     const handleGoogleLogin = () => {
@@ -16,34 +15,35 @@ const LoginPage: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen">
-        <img
-            src={shootLogo}
-            alt="shootLogo"
-            style={{ width: '315px', height: '66.23px' }}
-        />
-        <div className="flex flex-col mt-[15.54px] w-[494px]">
-            <div style={typography.title.medium}>Sign in to your account</div>
-            <button
-            onClick={handleGoogleLogin}
-            className="flex items-center justify-center mt-[12px] gap-[8px]"
-            style={{
-                width: '100%',
-                height: '53px',
-                backgroundColor: colors.grayscale[80],
-                ...typography.title.small,
-            }}
-            >
-            <span style={typography.title.small}>Continue With Google</span>
-            </button>
-            <div className="flex flex-col items-center justify-center">
-            <div className="mt-[16px]">
-                Don’t have an account yet?
-                <button className="ml-1 underline" onClick={() => navigate('/signup')}>
-                Sign Up
+            <img
+                src={shootLogo}
+                alt="shootLogo"
+                className="w-[315px] h-[66.23px]"
+            />
+            <div className="flex flex-col mt-[15.54px] w-[494px]">
+                <div className="text-xl font-medium">Sign in to your account</div>
+
+                <button
+                    onClick={handleGoogleLogin}
+                    className="flex items-center justify-center mt-[12px] gap-[8px] rounded-lg bg-[colors.grayscale[80]] w-full h-[53px] hover:border-[1px] hover:border-[#9CFFBF]"
+                    style={{
+                        backgroundColor: colors.grayscale[80],
+                        ...typography.title.small,
+                    }}
+                >
+                    <img src={googleLogo} className="w-[24px]" />
+                    <span style={typography.title.small}>Continue With Google</span>
                 </button>
+
+                <div className="flex flex-col items-center justify-center">
+                    <div className="mt-[16px]">
+                        Don’t have an account yet?
+                        <button className="ml-1 underline" onClick={() => navigate('/signup')}>
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </div>
     );
 };

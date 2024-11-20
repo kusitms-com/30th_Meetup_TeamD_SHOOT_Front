@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import shootMain from '../assets/shootMain.gif';
-import shoot1st from '../assets/shootFIRST.json';
-import shoot2nd from '../assets/shootSECOND.json';
-import shoot3rd from '../assets/shootTHIRD.json';
-import shoot4th from '../assets/shootFORTH.json';
-import shoot5th from '../assets/shootFIFTH.json';
-import shoot6th from '../assets/shootSIXTHgif.gif';
+import shootMain from '../assets/shoot/shootMain.gif';
+import shoot1st from '../assets/shoot/shootFIRST.json';
+import shoot2nd from '../assets/shoot/shootSECOND.json';
+import shoot3rd from '../assets/shoot/shootTHIRD.json';
+import shoot4th from '../assets/shoot/shootFORTH.json';
+import shoot5th from '../assets/shoot/shootFIFTH.json';
+import shoot6th from '../assets/shoot/shootSIXTHgif.gif';
 import Lottie from 'lottie-react';
 
 const MainPage = () => {
