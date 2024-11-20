@@ -1,22 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import shootMain from '../../assets/shootMain.gif';
-import shoot1st from '../../assets/shootFIRST.json';
-import shoot2nd from '../../assets/shootSECOND.json';
-import shoot3rd from '../../assets/shootTHIRD.json';
-import shoot4th from '../../assets/shootFORTH.json';
-import shoot5th from '../../assets/shootFIFTH.json';
-import shoot6th from '../../assets/shootSIXTHgif.gif';
+import shootMain from '../assets/shootMain.gif';
+import shoot1st from '../assets/shootFIRST.json';
+import shoot2nd from '../assets/shootSECOND.json';
+import shoot3rd from '../assets/shootTHIRD.json';
+import shoot4th from '../assets/shootFORTH.json';
+import shoot5th from '../assets/shootFIFTH.json';
+import shoot6th from '../assets/shootSIXTHgif.gif';
 import Lottie from 'lottie-react';
 
 const MainPage = () => {
     const [lineHeight, setLineHeight] = useState(0);
-    // const [isLogined, setIsLogined] = useState(false);
 
-    // 스크롤에 따라 선의 높이를 업데이트하는 함수
     const handleScroll = () => {
         const scrollY = window.scrollY;
-        // 스크롤 위치에 따라 선의 높이를 변경 (조정 가능)
         const newHeight = Math.min(scrollY - 100, 408); 
         setLineHeight(newHeight);
     };
@@ -29,19 +26,16 @@ const MainPage = () => {
 
     return (
         <div className="relative flex flex-col top-[250px] items-center justify-center w-full">
-            {/* 헤드라인 텍스트 */}
             <div className="text-white text-[50px] font-bold font-['Pretendard'] leading-[75px] tracking-wide text-center">
                 SHOOT YOUR CREATIVE OUTPUT
             </div>
 
-            {/* 서브 텍스트 */}
             <div className="w-[943px] mt-[46px] text-center text-white text-[19px] font-medium font-['Pretendard'] leading-7">
                 SHOOT integrates all key points,
                 <br /> emphasizing the flexibility, collaboration, and task management with FIGMA,
                 <br /> while maintaining user-friendly flow.
             </div>
 
-            {/* 회원가입 버튼 */}
             <Link to='signin'>
                 <div className="mt-[70px] h-[61px] p-4 rounded-[10px] border border-[#6effd9] flex justify-center items-center gap-2.5 cursor-pointer">
                     <div className="text-[#6effd9] text-[19px] font-medium font-['Pretendard'] leading-7 text-center">
@@ -50,8 +44,6 @@ const MainPage = () => {
                 </div>
             </Link>
             
-
-            {/* 메인 이미지 */}
             <img className="mt-[62px] w-[1293px] h-[697px]" src={shootMain} alt="Main illustration for the Shoot project" />
 
             {/** 구역 1 */}

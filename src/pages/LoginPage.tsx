@@ -8,6 +8,7 @@ import colors from '../styles/color';
 const LoginPage: React.FC = () => {
     const navigate = useNavigate();
 
+
     // Google 로그인 URL로 리디렉션
     const handleGoogleLogin = () => {
         window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=354662253053-amfnieo2m0ohp831hr6i0a1mhveidqp8.apps.googleusercontent.com&redirect_uri=http://localhost:5173/login&response_type=code&scope=openid email profile&access_type=offline'
