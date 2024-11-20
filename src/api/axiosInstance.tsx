@@ -2,7 +2,6 @@
 
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 
-// 토큰 갱신 함수
 const refreshAccessToken = async (): Promise<{ accessToken: string; refreshToken: string }> => {
   const response = await axios.post('/api/v1/auth/refresh', {
     refreshToken: localStorage.getItem('refreshToken'),
@@ -11,7 +10,6 @@ const refreshAccessToken = async (): Promise<{ accessToken: string; refreshToken
   return response.data;
 };
 
-// Axios 인스턴스 생성
 const instance = axios.create({
   baseURL: 'https://api.shoot-manage.com', 
   headers: { "Content-type": "application/json" }, 
@@ -54,13 +52,11 @@ if (!isInterceptorAdded) {
       ) {
         originalRequest._retryCount = originalRequest._retryCount || 0;
         
-        // Retry 1번까지만 허용
         if (originalRequest._retryCount < 2) {
           originalRequest._retryCount += 1;
           console.log('Attempting to refresh token...');
   
           try {
-            // 토큰 갱신 시도
             const newTokens = await refreshAccessToken();
             localStorage.setItem('accessToken', newTokens.accessToken);
             localStorage.setItem('refreshToken', newTokens.refreshToken);
@@ -69,25 +65,21 @@ if (!isInterceptorAdded) {
   
             originalRequest.headers.Authorization = `Bearer ${newTokens.accessToken}`;
   
-            // 새 토큰으로 요청 재시도
             return instance(originalRequest);
           } catch (e) {
             console.error('Token refresh failed:', e);
-            // 토큰 갱신 실패 시에는 재시도하지 않음
             return Promise.reject(e);
           }
         } else {
-          // 이미 재시도 횟수 초과 시에는 재시도하지 않음
           return Promise.reject(error);
         }
       }
   
-      // 그 외 오류 처리
       return Promise.reject(error);
     }
   );
   
-  isInterceptorAdded = true; // 인터셉터가 등록되었음을 표시
+  isInterceptorAdded = true;
 }
 
 export default instance;

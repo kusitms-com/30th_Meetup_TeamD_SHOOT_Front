@@ -1,16 +1,14 @@
 import axios from "axios";
 
-// Axios 인스턴스 생성
 const instance = axios.create({
-  baseURL: "https://api.shoot-manage.com", // API 서버의 기본 URL
+  baseURL: "https://api.shoot-manage.com", 
   headers: {
     "Content-Type": "application/json",
     "Authorization" : "jwt-token"
   },
-  withCredentials: true, // 쿠키와 인증 정보를 포함할 경우 사용
+  withCredentials: true, 
 });
 
-// 사용자 정보를 가져오는 함수
 export const fetchUserInfo = async (accessToken: string) => {
   try {
     const response = await instance.get("/api/v1/members", {

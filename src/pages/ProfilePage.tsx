@@ -7,12 +7,10 @@ import deleteIcon from '../assets/delete.svg';
 const ProfilePage: React.FC = () => {
     const [inputs, setInputs] = useState<string[]>(["psl8032001_1@naver.com"]);
 
-    // 추가 버튼 클릭 시 새로운 입력 필드 추가
     const handleAddInput = () => {
         setInputs([...inputs, ""]);
     };
 
-    // 삭제 버튼 클릭 시 해당 입력 필드 제거
     const handleDeleteInput = (index: number) => {
         setInputs(inputs.filter((_, i) => i !== index));
     };

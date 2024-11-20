@@ -3,7 +3,6 @@ import ShootLogo from "../assets/shoot/shootLogo.png";
 import useUserStore from "../store/UserStore";
 
 const Header = () => {
-  // 사용자 정보 가져오기
   const { username, ImgUrl, userId } = useUserStore();
 
   return (
