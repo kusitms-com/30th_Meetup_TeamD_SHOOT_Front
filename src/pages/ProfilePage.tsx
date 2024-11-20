@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import logoBack from '../assets/logoBack.svg';
-import figmaLogo from '../assets/figmaLogo.png';
+import figmaLogo from '../assets/logo/figmaLogo.png';
 import add from '../assets/add.svg';
 import deleteIcon from '../assets/delete.svg';
 
