@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import shootLogo from '../assets/shoot/shootLogo.png';
-import ConnectFigma from './signup/components/ConnectFigma';
-import SignupMain from './signup/components/SignupMain';
-import ConnectDiscord from './signup/components/ConnectDiscord';
+import shootLogo from '../../assets/shoot/shootLogo.png';
+import ConnectFigma from './components/ConnectFigma';
+import SignupMain from './components/SignupMain';
+import ConnectDiscord from './components/ConnectDiscord';
 
 const SignupPage = () => {
     

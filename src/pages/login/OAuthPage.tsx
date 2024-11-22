@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import instance from "../../api/axiosInstance";
 import useUserStore from "../../store/userStore";
 import { fetchUserInfo } from "../../api/userInfo";
+import loading from '../../assets/loading.gif';
 
 const OAuthPage = () => {
   const navigate = useNavigate();
@@ -72,7 +73,10 @@ const OAuthPage = () => {
     }
   }, [setUser]);
 
-  return <div>{/** 200이 오면 바로 로그인 페이지로 */}</div>;
+  return
+  <div className="flex justify-center items-center w-[1293px]">
+    <img src={loading}/>
+  </div>;
 };
 
 export default OAuthPage;

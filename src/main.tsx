@@ -1,16 +1,9 @@
-// index.tsx
-// import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App.tsx';
-import Header from './components/Header.tsx';
-import './index.css';
+import ReactDOM from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
+import router from "./router.tsx";
 
-createRoot(document.getElementById('root')!).render(
-    // <React.StrictMode>
-      <BrowserRouter>
-        <Header />
-        <App />
-      </BrowserRouter>
-    // </React.StrictMode>
+import "./index.css";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+        <RouterProvider router={router} />
   );

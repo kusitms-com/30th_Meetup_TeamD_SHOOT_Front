@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ShootLogo from "../assets/shoot/shootLogo.png";
-import useUserStore from "../store/UserStore";
+import useUserStore from "../store/userStore";
 
 const Header = () => {
   const { username, ImgUrl, userId } = useUserStore();
@@ -36,9 +36,11 @@ const Header = () => {
         )}
 
         <button className="px-10 py-2.5 bg-[#20f5bd] rounded-md justify-center items-center gap-2.5 flex">
-          <div className="text-center text-[#1d1e1e] text-base font-bold font-['Pretendard'] leading-relaxed">
-            FIGMA PLUGIN
-          </div>
+          <Link to="/connect-figma">
+            <div className="text-center text-[#1d1e1e] text-base font-bold font-['Pretendard'] leading-relaxed">
+              FIGMA PLUGIN
+            </div>
+          </Link>
         </button>
       </div>
     </div>
