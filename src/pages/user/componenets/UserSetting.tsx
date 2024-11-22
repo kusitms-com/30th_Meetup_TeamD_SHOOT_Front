@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ShootLogo from '../../../assets/logo/ShootLogo.svg';
 import DiscordLogo from '../../../assets/logo/DiscordLogo.svg';
-import deleteIcon from '../../../assets/delete.svg';
 import SettingInput from './SettingInput';
 
 const UserSetting: React.FC = () => {

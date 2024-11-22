@@ -17,14 +17,12 @@ const SettingInput = () => {
 
     return (
         <div className="relative w-[584px] mt-4">
-            {/* Header */}
             <p className="flex items-center p-[13px] justify-between text-[#707374] text-[12px] w-full">
                 <span className="text-left">Connection</span>
                 <span className="absolute transform -translate-x-1/2 left-1/2">Access</span>
                 <span className="text-right">Get alarm from Shoot</span>
             </p>
 
-            {/* Main Content */}
             <div
                 className={`relative w-full rounded-lg border border-[#525658] mt-[-10px] p-[18px] flex flex-col justify-between`}
                 style={{
@@ -34,15 +32,12 @@ const SettingInput = () => {
             >
                 {isConnectDiscord ? (
                     <div>
-                        {/* Top Row: Discord Info */}
                         <div className="flex items-center gap-2.5">
                             <img className="w-6 h-auto" src={DiscordLogo} alt="Discord Logo" />
                             <div className="text-white text-[15px] font-bold font-['Pretendard']">DISCORD</div>
                         </div>
 
-                        {/* Bottom Row: Email, Filename, and Alarm */}
                         <div className="relative flex items-center w-full mt-[14.5px]">
-                            {/* Left Section */}
                             <div className="flex items-center gap-2 text-left">
                                 <span className="text-white text-[13px]">address2@email.com</span>
                                 <img
@@ -53,12 +48,10 @@ const SettingInput = () => {
                                 />
                             </div>
 
-                            {/* Center Section */}
                             <span className="absolute left-1/2 transform -translate-x-1/2 text-white text-[13px]">
                                 File name1
                             </span>
 
-                            {/* Right Section */}
                             <div className="ml-auto">
                                 <img src={alarm} className="w-[16px]" alt="Alarm Icon" />
                             </div>
@@ -71,7 +64,6 @@ const SettingInput = () => {
                 )}
             </div>
 
-            {/* PopUp */}
             <PopUp 
                 isOpen={showPopup}
                 onDisconnect={handleDisconnect}

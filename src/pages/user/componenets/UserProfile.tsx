@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import figmaLogo from '../../../assets/logo/figmaLogo.png';
 import add from '../../../assets/add.svg';
 import deleteIcon from '../../../assets/delete.svg';
+import PopUp from './PopUp';
+
 
 const UserProfile: React.FC = () => {
+    const [showPopup, setShowPopup] = useState(false);
     const [inputs, setInputs] = useState<string[]>(["psl8032001_1@naver.com"]);
 
     const handleAddInput = () => {
@@ -13,6 +16,12 @@ const UserProfile: React.FC = () => {
     const handleDeleteInput = (index: number) => {
         setInputs(inputs.filter((_, i) => i !== index));
     };
+
+    const handleDeleteClick = () => setShowPopup(true);
+    const handleDisconnect = () => {
+        setShowPopup(false);
+    };
+    const handleClosePopup = () => setShowPopup(false);
 
     return (
         <div className="space-y-8">
@@ -46,7 +55,9 @@ const UserProfile: React.FC = () => {
                                     className="absolute transform -translate-y-1/2 right-4 top-1/2"
                                     onClick={() => handleDeleteInput(index)}
                                 >
-                                    <img src={deleteIcon} alt="Delete Icon" className="w-[24px] h-auto" />
+                                    <img src={deleteIcon}
+                                        onClick={handleDeleteClick}
+                                        className="w-[24px] h-auto" />
                                 </button>
                             </div>
                         ))}
@@ -65,6 +76,12 @@ const UserProfile: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            <PopUp 
+                isOpen={showPopup}
+                onDisconnect={handleDisconnect}
+                onClose={handleClosePopup}
+            />
         </div>
     );
 };
