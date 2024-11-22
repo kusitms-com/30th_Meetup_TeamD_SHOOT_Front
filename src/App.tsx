@@ -3,8 +3,8 @@ import {Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import MainPage from './pages/MainPage';
-import OAuthPage from './pages/OAuthPage';
-import UserPage from './pages/UserPage';
+import OAuthPage from './pages/signup/OAuthPage';
+import UserPage from './pages/user/UserPage';
 
 const App = () => {
     return (

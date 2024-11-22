@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import logoBack from '../assets/logoBack.svg';
-import UserProfile from '../components/UserProfile';
-import UserSetting from '../components/UserSetting';
+import logoBack from '../../assets/logoBack.svg';
+import UserProfile from './componenets/UserProfile';
+import UserSetting from './componenets/UserSetting';
 
 const ProfilePage: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'profile' | 'settings'>('profile');

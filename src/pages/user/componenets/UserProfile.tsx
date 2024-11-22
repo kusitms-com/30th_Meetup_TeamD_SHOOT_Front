@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import figmaLogo from '../assets/logo/figmaLogo.png';
-import add from '../assets/add.svg';
-import deleteIcon from '../assets/delete.svg';
+import figmaLogo from '../../../assets/logo/figmaLogo.png';
+import add from '../../../assets/add.svg';
+import deleteIcon from '../../../assets/delete.svg';
 
 const UserProfile: React.FC = () => {
     const [inputs, setInputs] = useState<string[]>(["psl8032001_1@naver.com"]);

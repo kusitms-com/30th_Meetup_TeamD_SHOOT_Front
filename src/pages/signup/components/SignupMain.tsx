@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import colors from '../../styles/color';
-import typography from '../../styles/typography';
+import colors from '../../../styles/color';
+import typography from '../../../styles/typography';
 import googleLogo from '../../assets/logo/googleLogo.png';
 
 interface SignupMainProps {

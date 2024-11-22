@@ -1,5 +1,5 @@
-import colors from '../../styles/color';
-import typography from '../../styles/typography';
+import colors from '../../../styles/color';
+import typography from '../../../styles/typography';
 
 interface SignupMainProps {
     onButtonClick: () => void;

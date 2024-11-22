@@ -1,9 +1,9 @@
 // pages/OAuthPage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import instance from "../api/axiosInstance";
-import useUserStore from "../store/UserStore";
-import { fetchUserInfo } from "../api/userInfo";
+import instance from "../../api/axiosInstance";
+import useUserStore from "../../store/UserStore";
+import { fetchUserInfo } from "../../api/userInfo";
 
 const OAuthPage = () => {
   const navigate = useNavigate();
