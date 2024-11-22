@@ -2,23 +2,18 @@ import { useState } from 'react';
 import DiscordLogo from '../../../assets/logo/DiscordLogo.svg';
 import deleteIcon from '../../../assets/delete.svg';
 import alarm from '../../../assets/alarm.svg';
+import PopUp from './PopUp';
 
 const SettingInput = () => {
     const [isConnectDiscord, setIsConnectDiscord] = useState(true);
     const [showPopup, setShowPopup] = useState(false);
 
-    const handleDeleteClick = () => {
-        setShowPopup(true);
-    };
-
+    const handleDeleteClick = () => setShowPopup(true);
     const handleDisconnect = () => {
         setIsConnectDiscord(false);
         setShowPopup(false);
     };
-
-    const handleClosePopup = () => {
-        setShowPopup(false);
-    };
+    const handleClosePopup = () => setShowPopup(false);
 
     return (
         <div className="relative w-[584px] mt-4">
@@ -76,42 +71,12 @@ const SettingInput = () => {
                 )}
             </div>
 
-            {/* Updated Popup */}
-            {showPopup && (
-                <div
-                    className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-black bg-opacity-50"
-                    onClick={handleClosePopup}
-                >
-                    <div
-                        className="bg-[#2C2D2E] rounded-2xl w-[280px] overflow-hidden"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        {/* Popup Title */}
-                        <div className="py-6 text-[17px] font-medium text-center text-white">
-                            DISCONNECT THIS<br/> ACCOUNT?
-                        </div>
-                        
-                        {/* Button Container */}
-                        <div className="flex border-t border-[#3E3F40]">
-                            {/* Disconnect Button */}
-                            <button
-                                className="flex-1 py-4 text-[#D82356] text-base font-medium border-r border-[#3E3F40] hover:bg-[#3E3F40] transition-colors"
-                                onClick={handleDisconnect}
-                            >
-                                Disconnect
-                            </button>
-                            
-                            {/* No Button */}
-                            <button
-                                className="flex-1 py-4 text-white text-base font-medium hover:bg-[#3E3F40] transition-colors"
-                                onClick={handleClosePopup}
-                            >
-                                No
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
+            {/* PopUp */}
+            <PopUp 
+                isOpen={showPopup}
+                onDisconnect={handleDisconnect}
+                onClose={handleClosePopup}
+            />
         </div>
     );
 };

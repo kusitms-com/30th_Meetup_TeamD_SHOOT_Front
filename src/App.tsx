@@ -4,7 +4,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import MainPage from './pages/MainPage';
 import OAuthPage from './pages/signup/OAuthPage';
-import UserPage from './pages/user/UserPage';
+import UserPage from './pages/user/index1';
 
 const App = () => {
     return (
