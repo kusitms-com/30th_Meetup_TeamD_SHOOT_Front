@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ShootLogo from '../../../assets/logo/ShootLogo.svg';
 import DiscordLogo from '../../../assets/logo/DiscordLogo.svg';
 import SettingInput from './SettingInput';

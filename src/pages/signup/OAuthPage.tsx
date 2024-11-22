@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import instance from "../../api/axiosInstance";
-import useUserStore from "../../store/UserStore";
+import useUserStore from "../../store/userStore";
 import { fetchUserInfo } from "../../api/userInfo";
 
 const OAuthPage = () => {
