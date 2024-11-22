@@ -7,7 +7,7 @@ import { fetchUserInfo } from "../api/userInfo";
 
 const OAuthPage = () => {
   const navigate = useNavigate();
-  const { username, ImgUrl, userId, setUser } = useUserStore();
+  const { setUser } = useUserStore();
 
   const getCodeFromUrl = (): string | null => {
     const params = new URLSearchParams(window.location.search);
