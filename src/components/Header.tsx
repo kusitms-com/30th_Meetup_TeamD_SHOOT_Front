@@ -15,14 +15,16 @@ const Header = () => {
 
       <div className="flex items-center gap-12 mr-[320px]">
         {userId ? (
-          <div className="flex items-center gap-4">
-            <img
-              src={ImgUrl}
-              alt={username}
-              className="object-cover w-8 h-8 rounded-full"
-            />
-            <span className="text-white">{username}</span>
-          </div>
+          <Link to="/user">
+            <div className="flex items-center gap-4">
+              <img
+                src={ImgUrl}
+                alt={username}
+                className="object-cover w-8 h-8 rounded-full"
+              />
+              <span className="text-white">{username}</span>
+            </div>
+          </Link>
         ) : (
           <div className="relative w-16 h-8">
             <Link to="signin">
