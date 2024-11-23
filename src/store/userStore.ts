@@ -1,21 +1,19 @@
 import { create } from "zustand";
 
-// 타입 지정
-
 interface UserStore {
   username: string;
   email: string;
   ImgUrl: string;
   userId: string;
+  setUser: (user: Partial<UserStore>) => void; 
 }
-
-// 초기값 지정
 
 const useUserStore = create<UserStore>()((set) => ({
   username: "",
-  email:"",
-  ImgUrl:"",
-  userId: ""
+  email: "",
+  ImgUrl: "",
+  userId: "",
+  setUser: (user) => set((state) => ({ ...state, ...user })), 
 }));
 
 export default useUserStore;
