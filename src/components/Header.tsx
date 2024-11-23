@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ShootLogo from "../assets/shoot/shootLogo.png";
-import useUserStore from "../store/UserStore";
+import useUserStore from "../store/userStore";
 
 const Header = () => {
   const { username, ImgUrl, userId } = useUserStore();
