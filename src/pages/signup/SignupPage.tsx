@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import shootLogo from '../../assets/shoot/shootLogo.png';
-import ConnectFigma from './components/ConnectFigma';
-import SignupMain from './components/SignupMain';
-import ConnectDiscord from './components/ConnectDiscord';
+// import { useState } from 'react';
+import shootLogo from '../../../public/images/shoot/shootLogo.png';
+// import ConnectFigma from './components/ConnectFigma';
+// import SignupMain from './components/SignupMain';
+// import ConnectDiscord from './components/ConnectDiscord';
 
 const SignupPage = () => {
     
-    const [isSignupMainVisible, setIsSignupMainVisible] = useState(true);
-    const [isConnectFigma, setIsConnectFigma] = useState(true);
+    // const [isSignupMainVisible, setIsSignupMainVisible] = useState(true);
+    // const [isConnectFigma, setIsConnectFigma] = useState(true);
 
-    const handleSignupButtonClick = () => {
-        setIsSignupMainVisible(false);
-    };
+    // const handleSignupButtonClick = () => {
+    //     setIsSignupMainVisible(false);
+    // };
 
-    const handleConnectFigmaButtonClick = () => {
-        setIsConnectFigma(false);
-    };
+    // const handleConnectFigmaButtonClick = () => {
+    //     setIsConnectFigma(false);
+    // };
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen">
@@ -24,15 +24,15 @@ const SignupPage = () => {
                 alt="shootLogo" 
                 style={{ width: "315px", height: "66.23px" , top: '300px'}} 
             />
-            {isSignupMainVisible ? (
-                <SignupMain onButtonClick={handleSignupButtonClick} />
+            {/* {isSignupMainVisible ? (
+                <SignupMain />
             ) : (
                 isConnectFigma ? (
-                    <ConnectFigma onButtonClick={handleConnectFigmaButtonClick} />
+                    <ConnectFigma />
                 ) : (
                     <ConnectDiscord />
                 )
-            )}
+            )} */}
         </div>
     );
 };

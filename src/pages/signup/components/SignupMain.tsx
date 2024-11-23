@@ -3,11 +3,7 @@ import colors from '../../../styles/color';
 import typography from '../../../styles/typography';
 import googleLogo from '../../../assets/logo/googleLogo.png';
 
-interface SignupMainProps {
-    onButtonClick: () => void;
-}
-
-const SignupMain: React.FC<SignupMainProps> = ({ onButtonClick }) => {
+const SignupMain: React.FC = () => {
     const handleGoogleLogin = () => {
         window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=354662253053-amfnieo2m0ohp831hr6i0a1mhveidqp8.apps.googleusercontent.com&redirect_uri=http://localhost:5173/login&response_type=code&scope=openid email profile&access_type=offline'
     };

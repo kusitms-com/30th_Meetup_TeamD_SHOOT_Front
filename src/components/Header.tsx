@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ShootLogo from "../assets/shoot/shootLogo.png";
+import ShootLogo from "../../public/images/shoot/shootLogo.png";
 import useUserStore from "../store/userStore";
 
 const Header = () => {

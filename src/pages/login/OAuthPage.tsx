@@ -62,21 +62,20 @@ const OAuthPage = () => {
     }
   };
 
-
   useEffect(() => {
     const code = getCodeFromUrl();
     if (code) {
       console.log("Google Authorization Code:", code);
       handleLogin(code);
       getUserData();
-      console.log()
     }
   }, [setUser]);
 
-  return
-  <div className="flex justify-center items-center w-[1293px]">
-    <img src={loading}/>
-  </div>;
+  return (
+    <div className="flex justify-center items-center w-[1293px]">
+      <img src={loading} alt="Loading..." />
+    </div>
+  );
 };
 
 export default OAuthPage;

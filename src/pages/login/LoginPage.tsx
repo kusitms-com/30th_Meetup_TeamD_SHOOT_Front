@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import googleLogo from '../../assets/logo/googleLogo.png';
-import shootLogo from '../../assets/shoot/shootLogo.png';
+import shootLogo from '../../../public/images/shoot/shootLogo.png';
 import typography from '../../styles/typography';
 import colors from '../../styles/color';
 
