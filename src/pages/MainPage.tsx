@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import shootMain from '../assets/shoot/shootMain.gif';
+import shootMain from '../assets/shoot/shootmain.gif'
 import shoot1st from '../assets/shoot/shootFIRST.json';
 import shoot2nd from '../assets/shoot/shootSECOND.json';
 import shoot3rd from '../assets/shoot/shootTHIRD.json';
