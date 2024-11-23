@@ -22,5 +22,8 @@ export default defineConfig({
       rewrite: (path) => path.replace(/^\/api/, ''),
      
     }},
-  }
+  },
+  build: {
+    chunkSizeWarningLimit: 2000, // 기본값은 500KB
+  },
 })
