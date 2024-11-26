@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import ShootLogo from "../../public/images/shoot/shootLogo.png";
-// import useUserStore from "../store/userStore";
 import { getMemberInfo } from "../api/membersAxios";
 import { useEffect, useState } from "react";
 
