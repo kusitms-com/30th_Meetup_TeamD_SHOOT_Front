@@ -5,6 +5,8 @@ const routes = {
     outhPage: "/login",
     connectFigma: "/connect-figma",
     connectDiscord: "/connect-discord",
+    loginFigma: "/login/figma",
+    loginDiscord: "/login/discord",
     user: "/user",
 }
   

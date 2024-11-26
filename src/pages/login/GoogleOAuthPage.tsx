@@ -6,7 +6,7 @@ import useUserStore from "../../store/userStore";
 import { fetchUserInfo } from "../../api/userInfo";
 import loading from '../../assets/loading.gif';
 
-const OAuthPage = () => {
+const GoogleOAuthPage = () => {
   const navigate = useNavigate();
   const { setUser } = useUserStore();
 
@@ -31,7 +31,7 @@ const OAuthPage = () => {
       localStorage.setItem("refreshToken", response.data.data.refreshToken);
       
       navigate("/");
-    } catch (error: any) {
+    } catch (error) {
       console.error("로그인 실패:", error);
 
       if (error.response?.status === 401) {
@@ -67,7 +67,7 @@ const OAuthPage = () => {
     if (code) {
       console.log("Google Authorization Code:", code);
       handleLogin(code);
-      getUserData();
+      // getUserData();
     }
   }, [setUser]);
 
@@ -78,4 +78,4 @@ const OAuthPage = () => {
   );
 };
 
-export default OAuthPage;
+export default GoogleOAuthPage;

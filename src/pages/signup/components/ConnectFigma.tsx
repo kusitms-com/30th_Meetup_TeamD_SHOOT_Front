@@ -4,8 +4,8 @@ import shootLogo from '../../../../public/images/shoot/shootLogo.png';
 
 const ConnectFigma: React.FC = () => {
 
-    const handleGoogleLogin = () => {
-        window.location.href = 'https://www.figma.com/oauth?client_id=OSEOcfCVk52Uci4uNnFRb9&redirect_uri=http://localhost:3000&scope=file_read&state=STATE_STRING&response_type=code'
+    const handleFigmaLogin = () => {
+        window.location.href = 'https://www.figma.com/oauth?client_id=OSEOcfCVk52Uci4uNnFRb9&redirect_uri=http://localhost:5173/login/figma&scope=file_read&state=STATE_STRING&response_type=code';
     };
 
     return (
@@ -14,7 +14,7 @@ const ConnectFigma: React.FC = () => {
             <div style={typography.links.large}>SHOOT integrating with your FIGMA account</div>
             <button 
                 className="flex items-center justify-center mt-[12px] gap-[8px] rounded-lg bg-[colors.grayscale[80]] w-full h-[53px] hover:border-[1px] hover:border-[#9CFFBF]"
-                onClick={handleGoogleLogin}
+                onClick={handleFigmaLogin}
                 style={{ 
                     width: '494px', 
                     height: '53px', 

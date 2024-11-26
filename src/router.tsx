@@ -4,11 +4,13 @@ import routes from "./constants/routes";
 import LoginPage from './pages/login/LoginPage';
 import SignupPage from './pages/signup/SignupPage';
 import MainPage from './pages/MainPage';
-import OAuthPage from './pages/login/OAuthPage';
-import UserPage from './pages/user/index1';
+import OAuthPage from './pages/login/GoogleOAuthPage';
+import UserPage from './pages/user/ProfilePage';
 import ConnectDiscord from "./pages/signup/components/ConnectDiscord";
 import ConnectFigma from "./pages/signup/components/ConnectFigma";
 import Header from "./components/Header";
+import FigmaOAuthPage from "./pages/login/FigmaOAuthPage";
+import DiscordOAuthPage from "./pages/login/DiscordOAuthPage";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: routes.user,
         element: <UserPage />,
+      },
+      {
+        path: routes.loginFigma,
+        element: <FigmaOAuthPage />,
+      },
+      {
+        path: routes.loginDiscord,
+        element: <DiscordOAuthPage />,
       },
     ],
   },

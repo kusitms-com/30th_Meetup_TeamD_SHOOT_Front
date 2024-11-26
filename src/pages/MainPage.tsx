@@ -143,7 +143,7 @@ const MainPage = () => {
                             <br/>status management
                         </div>
                         <div className="mt-[276px]">
-                            <img src={shoot6th}/>
+                            <img src={shoot6th} className='rounded-3xl'/>
                         </div>
                     </div>
                    
