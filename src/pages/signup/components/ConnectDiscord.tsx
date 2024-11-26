@@ -1,5 +1,6 @@
 import colors from '../../../styles/color';
 import typography from '../../../styles/typography';
+import shootLogo from '../../../../public/images/shoot/shootLogo.png';
 
 const ConnectDiscord = () => {
     
@@ -8,7 +9,9 @@ const ConnectDiscord = () => {
     };
 
     return (
-        <div className='flex flex-col items-center justify-center mt-[15.54px] w-[494px]'>
+        <div className='flex flex-col items-center justify-center h-screen w-full mt-[15.54px] '>
+            <img src={shootLogo} className='h-[66px] mb-[55px]'/>
+
             <div style={typography.title.medium}> 
                 <p className='text-center' >
                     SHOOT intergrating with your DISCORD account
@@ -20,9 +23,10 @@ const ConnectDiscord = () => {
             <button 
                 onClick={handleDiscordLogin}
                 style={{ 
-                    width: '100%', 
+                    width: '454.95px', 
                     height: '53px', 
                     marginTop: '80px', 
+                    borderRadius:'8px',
                     backgroundColor: colors.grayscale[80],
                     ...typography.title.xsmall
                 }}
@@ -31,9 +35,10 @@ const ConnectDiscord = () => {
             </button>
             <button 
                 style={{ 
-                    width: '100%', 
+                    width: '454.95px', 
                     height: '53px', 
                     marginTop: '40px', 
+                    borderRadius:'8px',
                     backgroundColor: colors.primary[50],
                     ...typography.title.xsmall,
                     color: colors.grayscale[90]

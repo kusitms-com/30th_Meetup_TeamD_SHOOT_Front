@@ -25,7 +25,7 @@ const FigmaOAuthPage = () => {
       });
 
       console.log("figma 로그인 성공:", response.data);
-      navigate("/");
+      navigate("/connect-discord");
     } catch (error: any) {
       console.error("로그인 실패:", error);
 
