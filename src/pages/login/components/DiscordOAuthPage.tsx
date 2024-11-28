@@ -1,11 +1,11 @@
 // pages/OAuthPage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import figmaInstance from "../../api/figmaAxios";
+import discordInstance from "../../../api/discordAxios";
 import loading from '../../assets/loading.gif';
 import { AxiosError } from "axios";
-
-const FigmaOAuthPage = () => {
+  
+const DiscordOAuthPage = () => {
   const navigate = useNavigate();
 
   const getCodeFromUrl = (): string | null => {
@@ -18,24 +18,24 @@ const FigmaOAuthPage = () => {
 
   const handleLogin = async (code: string) => {
     try {
-      const response = await figmaInstance.get(`/api/v1/auth/code/figma`, {
+      const response = await discordInstance.get(`/api/v1/auth/code/discord`, {
         params: { code },
         withCredentials: true,
       });
 
-      console.log("figma 로그인 성공:", response.data);
-      navigate("/connect-discord");
-    } catch (error) {
-      const axiosError = error as AxiosError; 
-      console.error("로그인 실패:", axiosError);
-      
-      if (axiosError.response?.status === 401) {
-          navigate("/connect-discord");
-      } else {
-          alert("로그인 처리 중 오류가 발생했습니다.");
-      }
-      }
-  };
+      console.log("Discord 로그인 성공:", response.data);
+      navigate("/");
+    }  catch (error) {
+        const axiosError = error as AxiosError; 
+        console.error("로그인 실패:", axiosError);
+        
+        if (axiosError.response?.status === 401) {
+            navigate("/connect-discord");
+        } else {
+            alert("로그인 처리 중 오류가 발생했습니다.");
+        }
+        }
+    };
 
   const getUserData = async () => {
     const accessToken = localStorage.getItem("accessToken"); 
@@ -48,7 +48,7 @@ const FigmaOAuthPage = () => {
   useEffect(() => {
     const code = getCodeFromUrl();
     if (code) {
-      console.log("Figma Authorization Code:", code);
+      console.log("Discord Authorization Code:", code);
       handleLogin(code);
       getUserData();
     }
@@ -61,4 +61,4 @@ const FigmaOAuthPage = () => {
   );
 };
 
-export default FigmaOAuthPage;
+export default DiscordOAuthPage;

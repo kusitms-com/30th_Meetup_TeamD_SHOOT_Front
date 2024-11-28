@@ -79,7 +79,6 @@ const UserProfile: React.FC = () => {
                             {figmaInfo?.email || "No Figma account connected"}
                         </p>
 
-                        {/* 버튼들을 수직 정렬 */}
                         <div className="flex flex-col items-start gap-2 mt-[10px]">
                             <button
                                 className="text-[13px] text-white underline"

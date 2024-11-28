@@ -1,7 +1,7 @@
 // pages/OAuthPage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import instance from "../../api/axiosInstance";
+import instance from "../../../api/axiosInstance";
 import loading from '../../assets/loading.gif';
 import { AxiosError } from "axios";
 
