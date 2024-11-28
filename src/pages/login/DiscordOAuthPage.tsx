@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import discordInstance from "../../api/discordAxios";
 import loading from '../../assets/loading.gif';
 import { AxiosError } from "axios";
-
+  
 const DiscordOAuthPage = () => {
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const DiscordOAuthPage = () => {
       console.log("Discord 로그인 성공:", response.data);
       navigate("/connect-discord");
     }  catch (error) {
-        const axiosError = error as AxiosError; // 타입 단언 추가
+        const axiosError = error as AxiosError; 
         console.error("로그인 실패:", axiosError);
         
         if (axiosError.response?.status === 401) {

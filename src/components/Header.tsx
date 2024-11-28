@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     const fetchUserInfo = async () => {
       const token = localStorage.getItem("accessToken");
       if (!token) {
-        console.error("JWT token is missing.");
+        console.log("JWT token is missing.");
         setLoading(false); 
         return;
       }
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
       </Link>
 
       <div className="flex items-center gap-12 mr-[320px]">
-        {userInfo !== null || loading || error ? ( 
+        {userInfo !== null &&(loading || error) ? ( 
           <Link to="/user">
             <div className="flex items-center gap-4">
               <img
