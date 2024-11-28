@@ -1,13 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import figmaLogo from '../../../assets/logo/figmaLogo.png';
 import add from '../../../assets/add.svg';
 import deleteIcon from '../../../assets/delete.svg';
 import PopUp from './PopUp';
+import { figmaCheckApi } from '../../../api/figmaCheckApi'; // figmaCheckApi를 임포트
 
+interface FigmaInfo {
+   figmaId: string;
+   email: string;
+}
 
 const UserProfile: React.FC = () => {
     const [showPopup, setShowPopup] = useState(false);
-    const [inputs, setInputs] = useState<string[]>(["psl8032001_1@naver.com"]);
+    const [figmaInfo, setFigmaInfo] = useState<FigmaInfo|null>(null);
+    const [inputs, setInputs] = useState<string[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchFigmaAccountInfo = async () => {
+        const token = localStorage.getItem("accessToken");
+        if (!token) {
+            console.log("Not found Figma account information");
+            setLoading(false);
+            return;
+            }
+
+            try {
+            const data = await figmaCheckApi(token);
+            setFigmaInfo(data);
+            }catch (err) {
+            console.error("Error fetching figma info:", err);
+            } finally {
+            setLoading(false);
+            }
+        };
+
+        fetchFigmaAccountInfo();
+    });
 
     const handleAddInput = () => {
         setInputs([...inputs, ""]);
@@ -43,7 +72,7 @@ const UserProfile: React.FC = () => {
                                 <input
                                     type="email"
                                     value={input}
-                                    placeholder="psl8032001_1@naver.com"
+                                    placeholder={loading ? "Loading..." : figmaInfo?.email} // 로딩 중이라면 "Loading..." 표시
                                     className="w-full h-[62px] px-5 py-[18px] rounded-lg border border-[#525658] text-[#6f7274] text-[17px] font-normal font-['Pretendard'] leading-relaxed placeholder:text-[#6f7274] bg-transparent outline-none"
                                     onChange={(e) => {
                                         const newInputs = [...inputs];

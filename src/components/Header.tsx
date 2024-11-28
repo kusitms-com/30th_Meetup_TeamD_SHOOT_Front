@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false); // 모달 상태 추가
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -45,7 +45,6 @@ const Header: React.FC = () => {
   
   const handleUserAreaMouseLeave = (e: React.MouseEvent) => {
     const relatedTarget = e.relatedTarget as HTMLElement;
-    // 모달 영역까지 포함해서 확인
     if (!relatedTarget || !relatedTarget.closest('.user-dropdown-container')) {
       setIsModalOpen(false);
     }
@@ -53,7 +52,6 @@ const Header: React.FC = () => {
   
   const handleModalMouseLeave = (e: React.MouseEvent) => {
     const relatedTarget = e.relatedTarget as HTMLElement;
-    // 사용자 영역과 모달 영역을 모두 포함해서 확인
     if (!relatedTarget || !relatedTarget.closest('.user-dropdown-container')) {
       setIsModalOpen(false);
     }
@@ -128,7 +126,6 @@ const Header: React.FC = () => {
           </Link>
         )}
 
-        {/* Figma Plugin Button */}
         <Link to="/connect-figma">
           <button className="px-10 py-2.5 bg-[#20f5bd] rounded-md flex items-center justify-center">
             <span className="text-center text-[#1d1e1e] text-base font-bold font-['Pretendard'] leading-relaxed">
