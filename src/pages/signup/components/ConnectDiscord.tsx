@@ -1,6 +1,7 @@
 import colors from '../../../styles/color';
 import typography from '../../../styles/typography';
 import shootLogo from '../../../../public/images/shoot/shootLogo.png';
+import { Link } from 'react-router-dom';
 
 const ConnectDiscord = () => {
     
@@ -33,19 +34,22 @@ const ConnectDiscord = () => {
             >
                 Connect DISCORD
             </button>
-            <button 
-                style={{ 
-                    width: '454.95px', 
-                    height: '53px', 
-                    marginTop: '40px', 
-                    borderRadius:'8px',
-                    backgroundColor: colors.primary[50],
-                    ...typography.title.xsmall,
-                    color: colors.grayscale[90]
-                }}
-            >
-                Do it later
-            </button>
+            <Link to ='/'>
+                <button 
+                    style={{ 
+                        width: '454.95px', 
+                        height: '53px', 
+                        marginTop: '40px', 
+                        borderRadius:'8px',
+                        backgroundColor: colors.primary[50],
+                        ...typography.title.xsmall,
+                        color: colors.grayscale[90]
+                    }}
+                >
+                    Do it later
+                </button>
+            </Link>
+            
         </div>
     );
 };

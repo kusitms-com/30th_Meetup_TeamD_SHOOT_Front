@@ -1,7 +1,7 @@
 // pages/OAuthPage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import discordInstance from "../../api/discordAxios";
+import discordInstance from "../../../api/discordAxios";
 import loading from '../../assets/loading.gif';
 import { AxiosError } from "axios";
   
@@ -24,7 +24,7 @@ const DiscordOAuthPage = () => {
       });
 
       console.log("Discord 로그인 성공:", response.data);
-      navigate("/connect-discord");
+      navigate("/");
     }  catch (error) {
         const axiosError = error as AxiosError; 
         console.error("로그인 실패:", axiosError);
@@ -55,7 +55,7 @@ const DiscordOAuthPage = () => {
   });
 
   return (
-    <div className="flex justify-center items-center w-[1293px]">
+    <div className="flex items-center justify-center w-full h-screen">
       <img src={loading} alt="Loading..." />
     </div>
   );

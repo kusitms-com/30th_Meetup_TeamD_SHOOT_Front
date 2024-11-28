@@ -1,11 +1,11 @@
 // pages/OAuthPage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import figmaInstance from "../../api/figmaAxios";
+import instance from "../../../api/axiosInstance";
 import loading from '../../assets/loading.gif';
 import { AxiosError } from "axios";
 
-const FigmaOAuthPage = () => {
+const GoogleOAuthPage = () => {
   const navigate = useNavigate();
 
   const getCodeFromUrl = (): string | null => {
@@ -18,13 +18,17 @@ const FigmaOAuthPage = () => {
 
   const handleLogin = async (code: string) => {
     try {
-      const response = await figmaInstance.get(`/api/v1/auth/code/figma`, {
+      const response = await instance.get(`/api/v1/auth/code/google`, {
         params: { code },
         withCredentials: true,
       });
 
-      console.log("figma 로그인 성공:", response.data);
-      navigate("/connect-discord");
+      console.log("로그인 성공:", response.data);
+
+      localStorage.setItem("accessToken", response.data.data.accessToken);
+      localStorage.setItem("refreshToken", response.data.data.refreshToken);
+      
+      navigate("/connect-figma");
     } catch (error) {
       const axiosError = error as AxiosError; 
       console.error("로그인 실패:", axiosError);
@@ -37,28 +41,19 @@ const FigmaOAuthPage = () => {
       }
   };
 
-  const getUserData = async () => {
-    const accessToken = localStorage.getItem("accessToken"); 
-    if (!accessToken) {
-      console.warn("엑세스 토큰이 없습니다.");
-      return;
-    }
-  };
-
   useEffect(() => {
     const code = getCodeFromUrl();
     if (code) {
-      console.log("Figma Authorization Code:", code);
+      console.log("Google Authorization Code:", code);
       handleLogin(code);
-      getUserData();
     }
-  });
+});
 
   return (
-    <div className="flex justify-center items-center w-[1293px]">
+    <div className="flex items-center justify-center w-full h-screen">
       <img src={loading} alt="Loading..." />
     </div>
   );
 };
 
-export default FigmaOAuthPage;
+export default GoogleOAuthPage;

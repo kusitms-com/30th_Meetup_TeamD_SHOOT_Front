@@ -1,11 +1,11 @@
 // pages/OAuthPage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import instance from "../../api/axiosInstance";
+import figmaInstance from "../../../api/figmaAxios";
 import loading from '../../assets/loading.gif';
 import { AxiosError } from "axios";
 
-const GoogleOAuthPage = () => {
+const FigmaOAuthPage = () => {
   const navigate = useNavigate();
 
   const getCodeFromUrl = (): string | null => {
@@ -18,17 +18,13 @@ const GoogleOAuthPage = () => {
 
   const handleLogin = async (code: string) => {
     try {
-      const response = await instance.get(`/api/v1/auth/code/google`, {
+      const response = await figmaInstance.get(`/api/v1/auth/code/figma`, {
         params: { code },
         withCredentials: true,
       });
 
-      console.log("로그인 성공:", response.data);
-
-      localStorage.setItem("accessToken", response.data.data.accessToken);
-      localStorage.setItem("refreshToken", response.data.data.refreshToken);
-      
-      navigate("/connect-figma");
+      console.log("figma 로그인 성공:", response.data);
+      navigate("/connect-discord");
     } catch (error) {
       const axiosError = error as AxiosError; 
       console.error("로그인 실패:", axiosError);
@@ -41,19 +37,28 @@ const GoogleOAuthPage = () => {
       }
   };
 
+  const getUserData = async () => {
+    const accessToken = localStorage.getItem("accessToken"); 
+    if (!accessToken) {
+      console.warn("엑세스 토큰이 없습니다.");
+      return;
+    }
+  };
+
   useEffect(() => {
     const code = getCodeFromUrl();
     if (code) {
-      console.log("Google Authorization Code:", code);
+      console.log("Figma Authorization Code:", code);
       handleLogin(code);
+      getUserData();
     }
-});
+  });
 
   return (
-    <div className="flex justify-center items-center w-[1293px]">
+    <div className="flex items-center justify-center w-full h-screen">
       <img src={loading} alt="Loading..." />
     </div>
   );
 };
 
-export default GoogleOAuthPage;
+export default FigmaOAuthPage;

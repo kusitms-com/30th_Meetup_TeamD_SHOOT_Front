@@ -14,7 +14,7 @@ if (!isInterceptorAdded) {
     discordInstance.interceptors.request.use(
     async (config: InternalAxiosRequestConfig): Promise<InternalAxiosRequestConfig> => {
       try {
-        console.log("figma 요청 인터셉터");
+        console.log("discord 요청 인터셉터");
         const accessToken = localStorage.getItem('accessToken');
         console.log('Access token in request interceptor:', accessToken);
         if (accessToken) {
