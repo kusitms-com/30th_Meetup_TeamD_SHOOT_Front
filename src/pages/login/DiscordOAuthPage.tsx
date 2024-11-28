@@ -24,7 +24,7 @@ const DiscordOAuthPage = () => {
       });
 
       console.log("Discord 로그인 성공:", response.data);
-      navigate("/connect-discord");
+      navigate("/");
     }  catch (error) {
         const axiosError = error as AxiosError; 
         console.error("로그인 실패:", axiosError);
