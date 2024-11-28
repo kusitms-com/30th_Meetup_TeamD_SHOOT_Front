@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import discordInstance from "../../../api/discordAxios";
-import loading from '../../assets/loading.gif';
+import loading from '../../../assets/loading.gif';
 import { AxiosError } from "axios";
   
 const DiscordOAuthPage = () => {
