@@ -19,6 +19,8 @@ export default {
         },
         Grayscale: {
           60: "#707374",
+          70: "#525658",
+          75: "#3E3F40",
         },
       },
       fontSize: {
