@@ -1,20 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import googleLogo from '../assets/logo/googleLogo.png';
-import shootLogo from '../assets/shoot/shootLogo.png';
-import typography from '../styles/typography';
-import colors from '../styles/color';
+import googleLogo from '../../assets/logo/googleLogo.png';
+import shootLogo from '../../../public/images/shoot/shootLogo.png';
+import typography from '../../styles/typography';
+import colors from '../../styles/color';
 
 const LoginPage: React.FC = () => {
     const navigate = useNavigate();
 
     const handleGoogleLogin = () => {
-        const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
-        const redirectUri = import.meta.env.VITE_GOOGLE_REDIRECT_URI;
-        const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=openid email profile&access_type=offline`;
-        window.location.href = url;
+        window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=354662253053-amfnieo2m0ohp831hr6i0a1mhveidqp8.apps.googleusercontent.com&redirect_uri=http://localhost:5173/login&response_type=code&scope=openid email profile&access_type=offline'
     };
-    
 
     return (
         <div className="flex flex-col items-center justify-center w-full h-screen">

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import shootMain from '../assets/shoot/shootmain.gif'
-import shoot1st from '../assets/shoot/shootFIRST.json';
-import shoot2nd from '../assets/shoot/shootSECOND.json';
-import shoot3rd from '../assets/shoot/shootTHIRD.json';
-import shoot4th from '../assets/shoot/shootFORTH.json';
-import shoot5th from '../assets/shoot/shootFIFTH.json';
-import shoot6th from '../assets/shoot/shootSIXTHgif.gif';
+import shootMain from '../../public/images/shoot/shootmain.gif';
+import shoot1st from '../../public/images/shoot/shootFIRST.json';
+import shoot2nd from '../../public/images/shoot/shootSECOND.json';
+import shoot3rd from '../../public/images/shoot/shootTHIRD.json';
+import shoot4th from '../../public/images/shoot/shootFORTH.json';
+import shoot5th from '../../public/images/shoot/shootFIFTH.json';
+import shoot6th from '../../public/images/shoot/shootSIXTHgif.gif';
 import Lottie from 'lottie-react';
 
 const MainPage = () => {
@@ -143,7 +143,7 @@ const MainPage = () => {
                             <br/>status management
                         </div>
                         <div className="mt-[276px]">
-                            <img src={shoot6th}/>
+                            <img src={shoot6th} className='rounded-3xl'/>
                         </div>
                     </div>
                    
