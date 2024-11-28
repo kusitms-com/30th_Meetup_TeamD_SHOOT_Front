@@ -16,10 +16,19 @@ export const figmaCheckApi = async (accessToken: string) => {
         });
 
         if (response.data.success) {
-            return {
-              figmaId: response.data.data.figmaId,
-              email: response.data.data.email,
-            };
+            console.log("figmaCheck success", response.data);
+            const figmaData = response.data.data;
+            if (Array.isArray(figmaData) && figmaData.length > 0) {
+                console.log("figmaCheck figmaId", figmaData[0].figmaId);
+                console.log("figmaCheck email", figmaData[0].email);
+
+                return {
+                    figmaId: figmaData[0].figmaId,
+                    email: figmaData[0].email,
+                };
+            } else {
+                throw new Error("No Figma data found");
+            }
           } else {
             throw new Error(`Failed to fetch user info: ${response.data.status}`);
           }

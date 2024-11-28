@@ -27,7 +27,9 @@ const UserProfile: React.FC = () => {
 
             try {
             const data = await figmaCheckApi(token);
+            console.log("Figma account info:", data);
             setFigmaInfo(data);
+            setInputs([data.email]); 
             }catch (err) {
             console.error("Error fetching figma info:", err);
             } finally {
@@ -36,7 +38,7 @@ const UserProfile: React.FC = () => {
         };
 
         fetchFigmaAccountInfo();
-    });
+    }, []);
 
     const handleAddInput = () => {
         setInputs([...inputs, ""]);
@@ -71,8 +73,8 @@ const UserProfile: React.FC = () => {
                             <div key={index} className="relative w-[584px] mt-4">
                                 <input
                                     type="email"
-                                    value={input}
-                                    placeholder={loading ? "Loading..." : figmaInfo?.email} // 로딩 중이라면 "Loading..." 표시
+                                    value={input || (loading ? "Loading..." : figmaInfo?.email || "")}
+                                    placeholder="Enter your email"
                                     className="w-full h-[62px] px-5 py-[18px] rounded-lg border border-[#525658] text-[#6f7274] text-[17px] font-normal font-['Pretendard'] leading-relaxed placeholder:text-[#6f7274] bg-transparent outline-none"
                                     onChange={(e) => {
                                         const newInputs = [...inputs];

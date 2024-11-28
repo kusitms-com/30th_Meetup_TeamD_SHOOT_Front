@@ -55,7 +55,7 @@ const DiscordOAuthPage = () => {
   });
 
   return (
-    <div className="flex justify-center items-center w-[1293px]">
+    <div className="flex items-center justify-center w-full h-screen">
       <img src={loading} alt="Loading..." />
     </div>
   );
