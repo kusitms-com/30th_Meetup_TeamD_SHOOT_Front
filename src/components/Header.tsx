@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     const fetchUserInfo = async () => {
       const token = localStorage.getItem("accessToken");
       if (!token) {
-        console.log("JWT token is missing.");
+        console.log("Yet login");
         setLoading(false); 
         return;
       }
