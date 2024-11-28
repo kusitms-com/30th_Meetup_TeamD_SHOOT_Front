@@ -126,13 +126,18 @@ const Header: React.FC = () => {
           </Link>
         )}
 
-        <Link to="/connect-figma">
-          <button className="px-10 py-2.5 bg-[#20f5bd] rounded-md flex items-center justify-center">
-            <span className="text-center text-[#1d1e1e] text-base font-bold font-['Pretendard'] leading-relaxed">
-              FIGMA PLUGIN
-            </span>
-          </button>
-        </Link>
+
+        <button className="px-10 py-2.5 bg-[#20f5bd] rounded-md flex items-center justify-center">
+          <a 
+            href="https://www.figma.com/team_invite/redeem/nwJRmQTA0WburOPMyBqnbJ" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-center text-[#1d1e1e] text-base font-bold font-['Pretendard'] leading-relaxed"
+          >
+            FIGMA PLUGIN
+          </a>
+        </button>
+
       </div>
     </div>
   );

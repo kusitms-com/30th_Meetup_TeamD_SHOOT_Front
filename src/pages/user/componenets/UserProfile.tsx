@@ -12,28 +12,28 @@ interface FigmaInfo {
 
 const UserProfile: React.FC = () => {
     const [showPopup, setShowPopup] = useState(false);
-    const [figmaInfo, setFigmaInfo] = useState<FigmaInfo|null>(null);
+    const [figmaInfo, setFigmaInfo] = useState<FigmaInfo | null>(null);
     const [inputs, setInputs] = useState<string[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchFigmaAccountInfo = async () => {
-        const token = localStorage.getItem("accessToken");
-        if (!token) {
-            console.log("Not found Figma account information");
-            setLoading(false);
-            return;
+            const token = localStorage.getItem("accessToken");
+            if (!token) {
+                console.log("Not found Figma account information");
+                setLoading(false);
+                return;
             }
 
             try {
-            const data = await figmaCheckApi(token);
-            console.log("Figma account info:", data);
-            setFigmaInfo(data);
-            setInputs([data.email]); 
-            }catch (err) {
-            console.error("Error fetching figma info:", err);
+                const data = await figmaCheckApi(token);
+                console.log("Figma account info:", data);
+                setFigmaInfo(data);
+                setInputs([data.email]);
+            } catch (err) {
+                console.error("Error fetching figma info:", err);
             } finally {
-            setLoading(false);
+                setLoading(false);
             }
         };
 
@@ -51,22 +51,49 @@ const UserProfile: React.FC = () => {
     const handleDeleteClick = () => setShowPopup(true);
     const handleDisconnect = () => {
         setShowPopup(false);
+        // 추가적으로 계정 연결 해제를 처리하는 로직을 여기에 추가
+        console.log("Figma account disconnected");
     };
     const handleClosePopup = () => setShowPopup(false);
 
     return (
         <div className="space-y-8">
             <div className="space-y-6">
-                <h2 className="text-Grayscale_0 text-[17px] font-bold font-['Pretendard'] leading-relaxed">Personal Accounts</h2>
+                <h2 className="text-Grayscale_0 text-[17px] font-bold font-['Pretendard'] leading-relaxed">
+                    Personal Accounts
+                </h2>
                 <svg className="w-full h-[1px] ml-[-14px] mt-[12px]" xmlns="http://www.w3.org/2000/svg">
                     <line x1="-14" y1="0" x2="100%" y2="0" stroke="var(--Grayscale-75, #3E3F40)" strokeWidth="1" />
                 </svg>
-            
+
                 <div className="space-y-4">
-                    <div className="space-y-2">
+                    <div className="flex flex-col ml-0 space-y-2" style={{ marginLeft: 0 }}>
                         <div className="flex items-center gap-2">
                             <img src={figmaLogo} className="w-[24px] h-auto" />
-                            <span className="text-Grayscale_0 text-[17px] font-bold font-['Pretendard'] leading-relaxed">FIGMA Account</span>
+                            <span className="text-Grayscale_0 text-[17px] font-bold font-['Pretendard'] leading-relaxed">
+                                FIGMA Account
+                            </span>
+                        </div>
+
+                        <p className="mt-5 text-[17px] font-normal font-['Pretendard'] leading-relaxed text-Grayscale-60">
+                            {figmaInfo?.email || "No Figma account connected"}
+                        </p>
+
+                        {/* 버튼들을 수직 정렬 */}
+                        <div className="flex flex-col items-start gap-2 mt-[10px]">
+                            <button
+                                className="text-[13px] text-white underline"
+                                onClick={handleDeleteClick}
+                            >
+                                Disconnect account
+                            </button>
+
+                            <button
+                                className="text-[13px] text-white underline"
+                                onClick={handleAddInput}
+                            >
+                                Add another figma account
+                            </button>
                         </div>
 
                         {inputs.map((input, index) => (
@@ -86,9 +113,7 @@ const UserProfile: React.FC = () => {
                                     className="absolute transform -translate-y-1/2 right-4 top-1/2"
                                     onClick={() => handleDeleteInput(index)}
                                 >
-                                    <img src={deleteIcon}
-                                        onClick={handleDeleteClick}
-                                        className="w-[24px] h-auto" />
+                                    <img src={deleteIcon} className="w-[24px] h-auto" />
                                 </button>
                             </div>
                         ))}
@@ -108,7 +133,7 @@ const UserProfile: React.FC = () => {
                 </div>
             </div>
 
-            <PopUp 
+            <PopUp
                 isOpen={showPopup}
                 onDisconnect={handleDisconnect}
                 onClose={handleClosePopup}
