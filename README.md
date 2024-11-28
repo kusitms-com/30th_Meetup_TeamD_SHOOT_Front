@@ -1,9 +1,9 @@
 # 🚀 서로 다른 우리가 결합되는 곳 ‘SHOOT’
 
-> 🔗 Link : [https://shoot-manage.](https://shoot-manage.netlify.app/)com
+> 🔗 Link : [https://shoot-manage.com](https://shoot-manage.com)
 > 
 
-https://github.com/user-attachments/assets/950c288d-1a52-46e5-97e3-9a9fe95ea3da
+![https://github.com/user-attachments/assets/950c288d-1a52-46e5-97e3-9a9fe95ea3da](https://github.com/user-attachments/assets/950c288d-1a52-46e5-97e3-9a9fe95ea3da)
 
 SHOOT은 피그마 내 작업물과 댓글의 효율적 관리, 팀 메신저 연동을 통해 협업과 생산성 향상을 돕습니다.
 
@@ -42,11 +42,11 @@ SHOOT은 피그마 내 작업물과 댓글의 효율적 관리, 팀 메신저 �
 : 방대한 양의 프레임 관리** → **알림 기능** → **코멘트 기능** 순으로 불편함을 느낌
 > 
 
-https://github.com/user-attachments/assets/21ded17e-d0de-482c-885c-ede93724b73d
+![https://github.com/user-attachments/assets/21ded17e-d0de-482c-885c-ede93724b73d](https://github.com/user-attachments/assets/21ded17e-d0de-482c-885c-ede93724b73d)
 
 ## **✅ Problem (문제 정의)**
 
-https://github.com/user-attachments/assets/18fc2d66-f5e0-46fa-af4e-1ae7d070b44f
+![https://github.com/user-attachments/assets/18fc2d66-f5e0-46fa-af4e-1ae7d070b44f](https://github.com/user-attachments/assets/18fc2d66-f5e0-46fa-af4e-1ae7d070b44f)
 
 ### Problem 1. 늘어만 가는 작업물과 코멘트, 효율적으로 관리할 수 없을까?
 
@@ -54,7 +54,7 @@ https://github.com/user-attachments/assets/18fc2d66-f5e0-46fa-af4e-1ae7d070b44f
 ”코멘트까지 생기면 정말 뭐가 뭔지를 모르겠습니다.”
 > 
 
-https://github.com/user-attachments/assets/d4a832f8-9020-4737-99b7-314602074bad
+![https://github.com/user-attachments/assets/d4a832f8-9020-4737-99b7-314602074bad](https://github.com/user-attachments/assets/d4a832f8-9020-4737-99b7-314602074bad)
 
 ### Problem 2. 태그하고 나서도 또 리마인드 해야 돼?
 
@@ -62,7 +62,7 @@ https://github.com/user-attachments/assets/d4a832f8-9020-4737-99b7-314602074bad
 “피그마 이메일 알람이 왔어요?”
 > 
 
-https://github.com/user-attachments/assets/2f40b138-009d-4139-8c20-27b92b260d72
+![https://github.com/user-attachments/assets/2f40b138-009d-4139-8c20-27b92b260d72](https://github.com/user-attachments/assets/2f40b138-009d-4139-8c20-27b92b260d72)
 
 ### 타겟층
 
@@ -81,19 +81,19 @@ https://github.com/user-attachments/assets/2f40b138-009d-4139-8c20-27b92b260d72
 
 ### 페르소나
 
-https://github.com/user-attachments/assets/0f4d5467-7bf4-41d9-9b89-a9110ab48c6d
+![https://github.com/user-attachments/assets/0f4d5467-7bf4-41d9-9b89-a9110ab48c6d](https://github.com/user-attachments/assets/0f4d5467-7bf4-41d9-9b89-a9110ab48c6d)
 
 개인 작업자
 
-https://github.com/user-attachments/assets/2cb172b7-7138-4eec-a874-18f5d1626d04
+![https://github.com/user-attachments/assets/2cb172b7-7138-4eec-a874-18f5d1626d04](https://github.com/user-attachments/assets/2cb172b7-7138-4eec-a874-18f5d1626d04)
 
 팀 작업자
 
 ### 유저저니맵
 
-https://github.com/user-attachments/assets/198bbd80-a213-43a8-aa1b-224638a424dc
+![https://github.com/user-attachments/assets/198bbd80-a213-43a8-aa1b-224638a424dc](https://github.com/user-attachments/assets/198bbd80-a213-43a8-aa1b-224638a424dc)
 
-https://github.com/user-attachments/assets/26bf4878-9de7-4dda-8625-ede9f05c2852
+![https://github.com/user-attachments/assets/26bf4878-9de7-4dda-8625-ede9f05c2852](https://github.com/user-attachments/assets/26bf4878-9de7-4dda-8625-ede9f05c2852)
 
 ## **✅ Solution (해결책)**
 
@@ -115,7 +115,7 @@ https://github.com/user-attachments/assets/26bf4878-9de7-4dda-8625-ede9f05c2852
 
 </aside>
 
-https://github.com/user-attachments/assets/aecc6595-b48d-4ec7-93d2-78e5b8660844
+![https://github.com/user-attachments/assets/aecc6595-b48d-4ec7-93d2-78e5b8660844](https://github.com/user-attachments/assets/aecc6595-b48d-4ec7-93d2-78e5b8660844)
 
 - **ARCHIVE** 란, BLOCK들이 모인 일종의 폴더를 의미합니다.
 - 바탕화면에서 폴더를 생성하듯이 [Create 클릭 > 이름 설정 > Save 클릭] 을 통해 생성합니다.
@@ -127,7 +127,7 @@ https://github.com/user-attachments/assets/aecc6595-b48d-4ec7-93d2-78e5b8660844
 
 </aside>
 
-https://github.com/user-attachments/assets/1edbab83-5243-430e-a840-4b3ce027401a
+![https://github.com/user-attachments/assets/1edbab83-5243-430e-a840-4b3ce027401a](https://github.com/user-attachments/assets/1edbab83-5243-430e-a840-4b3ce027401a)
 
 - **BLOCK** 이란, 유저에 의해 지정되는 영역을 말합니다.
 - [Create 클릭 > 영역 지정 > Save 클릭] 을 통해 생성합니다.
@@ -144,13 +144,18 @@ https://github.com/user-attachments/assets/1edbab83-5243-430e-a840-4b3ce027401a
 ”코멘트가 많아지면 화면이 번잡해져요.”
 > 
 
-[상단부 탭과 하단부 탭에서 SHOOT COMMENT 상태 변경을 통해 업무 상황 공유 ](https://github.com/user-attachments/assets/dac67ceb-8108-442b-9f8e-b78bc906781a)
+<div style="display: flex; justify-content: center;">
+  <div style="text-align: center; margin: 10px;">
+    <img src="https://github.com/user-attachments/assets/dac67ceb-8108-442b-9f8e-b78bc906781a" alt="상단부 탭과 하단부 탭에서 SHOOT COMMENT 상태 변경을 통해 업무 상황 공유" width="300">
+    <p>상단부 탭과 하단부 탭에서 SHOOT COMMENT 상태 변경을 통해 업무 상황 공유</p>
+  </div>
+  <div style="text-align: center; margin: 10px;">
+    <img src="https://github.com/user-attachments/assets/9234eec4-ce3c-482c-8c47-31c85fce72b7" alt="나를 멘션한 SHOOT COMMENT만 모아볼 수 있는 ‘Mentioned 탭" width="300">
+    <p>나를 멘션한 SHOOT COMMENT만 모아볼 수 있는 ‘Mentioned 탭</p>
+  </div>
+</div>
 
-상단부 탭과 하단부 탭에서 SHOOT COMMENT 상태 변경을 통해 업무 상황 공유 
 
-[나를 멘션한 SHOOT COMMENT만 모아볼 수 있는 ‘Mentioned 탭](https://github.com/user-attachments/assets/9234eec4-ce3c-482c-8c47-31c85fce72b7)
-
-나를 멘션한 SHOOT COMMENT만 모아볼 수 있는 ‘Mentioned 탭
 
 - BLOCK 안에 **SHOOT COMMENT** 를 통해 팀과 소통할 수 있습니다.
 - 이때 유저들은 각각의 SHOOT COMMENT 에 대해 [YET - DOING - DONE] 으로 상태 표시가 가능하며,
@@ -167,14 +172,18 @@ https://github.com/user-attachments/assets/1edbab83-5243-430e-a840-4b3ce027401a
 
 </aside>
 
-https://github.com/user-attachments/assets/61e5b87a-f3dd-4912-9e91-4b92fb38174d
+<div style="text-align: center;">
+  <img src="https://github.com/user-attachments/assets/61e5b87a-f3dd-4912-9e91-4b92fb38174d" alt="이미지 설명" width="300">
+  <p>이미지 설명</p>
+</div>
+
 
 - 분명한 알람으로 혼선 최소화합니다.
 - 메시지 클릭 시 해당 SHOOT COMMENT로 바로 이동할 수 있습니다.
 
 ### IA (정보구조도)
 
-https://github.com/user-attachments/assets/7a1c3150-2628-416a-a378-67d5d90d81b7
+![https://github.com/user-attachments/assets/7a1c3150-2628-416a-a378-67d5d90d81b7](https://github.com/user-attachments/assets/7a1c3150-2628-416a-a378-67d5d90d81b7)
 
 ## **✅ 차별성**
 
@@ -193,23 +202,23 @@ https://github.com/user-attachments/assets/7a1c3150-2628-416a-a378-67d5d90d81b7
 
 ### 포지셔닝맵
 
-https://github.com/user-attachments/assets/055b36b8-9f45-4004-b363-3523291507d4
+![https://github.com/user-attachments/assets/055b36b8-9f45-4004-b363-3523291507d4](https://github.com/user-attachments/assets/055b36b8-9f45-4004-b363-3523291507d4)
 
 ### 핵심 차별점 (vs. 피그마 코멘트 기능)
 
-https://github.com/user-attachments/assets/633f5578-a813-40a8-b653-3792f5070cfe
+![https://github.com/user-attachments/assets/633f5578-a813-40a8-b653-3792f5070cfe](https://github.com/user-attachments/assets/633f5578-a813-40a8-b653-3792f5070cfe)
 
 # **🔫 디자인 무드보드**
 
 ## **✅ 서비스 컨셉**
 
-https://github.com/user-attachments/assets/17170a98-f2d6-4547-8cf9-0f1b80aa2dee
+![https://github.com/user-attachments/assets/17170a98-f2d6-4547-8cf9-0f1b80aa2dee](https://github.com/user-attachments/assets/17170a98-f2d6-4547-8cf9-0f1b80aa2dee)
 
 ## **✅ 디자인시스템**
 
-https://github.com/user-attachments/assets/c0077727-6dda-4fb3-852a-79d1d2d7d5d3
+![https://github.com/user-attachments/assets/c0077727-6dda-4fb3-852a-79d1d2d7d5d3](https://github.com/user-attachments/assets/c0077727-6dda-4fb3-852a-79d1d2d7d5d3)
 
-https://github.com/user-attachments/assets/37a7eec5-421e-476f-8505-79926b3eeac8
+![https://github.com/user-attachments/assets/37a7eec5-421e-476f-8505-79926b3eeac8](https://github.com/user-attachments/assets/37a7eec5-421e-476f-8505-79926b3eeac8)
 
 ## **✅ GUI**
 
@@ -218,102 +227,67 @@ https://github.com/user-attachments/assets/37a7eec5-421e-476f-8505-79926b3eeac8
 > 메인 홈페이지 UI
 > 
 
-https://github.com/user-attachments/assets/212f86b8-7cdb-4cf0-bf1f-f4ae7f9eba9b
+![https://github.com/user-attachments/assets/212f86b8-7cdb-4cf0-bf1f-f4ae7f9eba9b](https://github.com/user-attachments/assets/212f86b8-7cdb-4cf0-bf1f-f4ae7f9eba9b)
 
 > MY PAGE UI (1)
 > 
 
-https://github.com/user-attachments/assets/b9acb2fb-dcda-462c-b9f8-37c106e46edc
+![https://github.com/user-attachments/assets/b9acb2fb-dcda-462c-b9f8-37c106e46edc](https://github.com/user-attachments/assets/b9acb2fb-dcda-462c-b9f8-37c106e46edc)
 
 > MY PAGE UI (2)
 > 
 
-https://github.com/user-attachments/assets/3b028879-8bb8-4210-aa62-7b175de838f9
-
+![https://github.com/user-attachments/assets/3b028879-8bb8-4210-aa62-7b175de838f9](https://github.com/user-attachments/assets/3b028879-8bb8-4210-aa62-7b175de838f9)
 ### 플러그인
 
-> 피그마 플러그인 로그인 UI
-> 
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/aa2673e7-1241-486d-804a-711567bc24fe/image.png)
+|피그마 플러그인 로그인 UI|SHOOT COMMEN__EMPTY UI|
+|------|---|
+|![피그마 플러그인 로그인 UI](https://github.com/user-attachments/assets/b61e8607-16cc-4f29-bf70-05ace7f3eba3)|![SHOOT COMMNET](https://github.com/user-attachments/assets/8cda05b9-e9ad-4bcb-9cb5-d540a271e118)|
 
-> SHOOT COMMENT
-YET UI
-> 
+|SHOOT COMMENT YET UI|SHOOT COMMENT DOING UI|
+|------|---|
+|![피그마](https://github.com/user-attachments/assets/e6131ae5-490d-476e-abc4-13038cfa9270)|![image](https://github.com/user-attachments/assets/397f865a-37e5-4602-a419-847d38f243ac)|
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/1aa35bf5-2d5f-4de2-94fc-c36cf6d74e4e/image.png)
+|SHOOT COMMENT DONE UI|SHOOT COMMENT MENTINED UI|
+|------|---|
+|![image](https://github.com/user-attachments/assets/3f0603a1-9265-4888-bbec-f26b2206e3a6)|![image](https://github.com/user-attachments/assets/d1d14cea-b593-4a55-ac14-0dea42191f64)|
 
-> SHOOT COMMENT
-DONE UI
-> 
+|CRETE_ARCHIVE|CREATE_ARCHIVE|
+|------|---|
+|![image](https://github.com/user-attachments/assets/4b655447-679d-4ace-a18c-cd3d7cecc3b2)|![image](https://github.com/user-attachments/assets/c8690302-2bb4-4248-95ad-0c2a7ff6196f)|
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/379635cc-000e-44fc-bc17-772d62d6a61e/image.png)
+|CREATE_BLOCK|CREATE_BLOCK|
+|------|---|
+|![image](https://github.com/user-attachments/assets/e0777eec-5fa6-4542-930e-5a4263765784)|![image](https://github.com/user-attachments/assets/a3d09aec-cfb4-47e4-a43f-f122bfdf4f40)|
 
-> CREATE_ARCHIVE
-> 
+|CREATE_SHOOT|CREATE_SHOOT|
+|------|---|
+|![image](https://github.com/user-attachments/assets/e613fe2a-d5be-4490-9737-a62edb2a4517)|![image](https://github.com/user-attachments/assets/3290f3a5-5fb4-4bcf-a704-9329216a3274)|
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/8eacd8f2-6a4f-498b-a0fc-454b128215e4/image.png)
 
-> CREATE_BLOCK
-> 
+![image](https://github.com/user-attachments/assets/1bc9acab-1e80-4247-bb80-e886729c75ff)
 
-https://github.com/user-attachments/assets/c87c7932-af22-40ca-8416-8e518f4ec01a
+![image](https://github.com/user-attachments/assets/e7bd0a65-746c-4248-b938-160deb7fadbf)
 
-> CREATE_SHOOT
-> 
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/678e5487-3231-44e4-918d-d0bcbc5a26e6/image.png)
-
-> SHOOT COMMENT_EMPTY UI
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/29a636fb-8d03-43b6-bf56-a3a1025b3fba/image.png)
-
-> SHOOT COMMENT
-DOING UI
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/39f03f71-c136-4a6f-9b74-6354f304931c/image.png)
-
-> SHOOT COMMENT
-MENTIONED UI
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/9085489d-12b9-40e2-8327-a7eac6013d85/image.png)
-
-> CREATE_ARCHIVE
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/c8467417-d046-4f41-aff9-545b3fd10ce3/image.png)
-
-> CREATE_BLOCK
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/60d1be13-9292-4da8-976f-15eeded93a22/image.png)
-
-> CREATE_SHOOT
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/d5b966af-8b81-4608-b546-3df42034b8f9/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/5dbf1ca7-430e-4ab9-a90a-879cec4014a1/image.png)
-
-요기ㅎㅁㅎ
-
-![기개디 PPT_다크모드.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/3d576a50-70c2-4e66-b64a-0b9aaf2d4bc3/%EA%B8%B0%EA%B0%9C%EB%94%94_PPT_%EB%8B%A4%ED%81%AC%EB%AA%A8%EB%93%9C.png)
 
 # Stack
 
 ## FE
-
 > **PLUGIN**
-> 
 - boilerplate를 사용하여 프로젝트의 초기 설정과 기본 구조를 표준화해 개발 시간을 단축하고, 코드의 일관성을 유지하며, 중복 작업을 줄여 생산성을 높이는 동시에 유지 보수성을 향상시켰습니다.
+
 - UI와 플러그인 코드는 서로 직접적으로 API에 접근할 수 없습니다. 이러한 문제를 해결하고 데이터를 주고받기 위해 `postMessage`와 `onmessage`를 사용합니다. UI는 브라우저 API를 통해 `postMessage`와 `onmessage`를 사용할 수 있고, 플러그인 코드는 플러그인 API에서 제공하는 `postMessage`와 `onmessage`를 통해 통신합니다. 이를 통해 두 영역 간의 통신이 가능해집니다.
+
 - 플러그인에서는 외부 이미지를 직접 받아오거나 로드할 수 없습니다. 이는 플러그인이 실행되는 **Sandbox 환경**의 제약 때문으로, 외부 리소스에 대한 직접적인 네트워크 요청이 차단됩니다. 이를 해결하기 위해 **프록시 서버**를 설정하는 방법을 사용하였습니다. 프록시 서버는 플러그인과 외부 리소스 간의 중계 역할을 하며, 외부 이미지 URL에 대한 요청을 받아 필요한 데이터를 대신 가져온 뒤, 플러그인에 반환합니다. 이렇게 하면 플러그인은 외부 서버와 직접 통신하지 않고, 프록시 서버를 통해 데이터를 안전하게 받을 수 있습니다.
 
+
 > **PLUGIN 기술 스택 선정 이유**
-> 
+
+**`boilerplate`**
+
+- 프로젝트의 초기 설정과 기본 구조를 표준화하여 개발 시간을 단축하고, 코드의 일관성을 유지하며, 중복 작업을 줄여 생산성을 높이는 동시에 유지 보수성을 향상 시킵니다.
 
 **`React`** 
 
@@ -329,7 +303,6 @@ MENTIONED UI
 
 > **WEB 기술 스택 선정 이유**
 > 
-
 **`React`** 
 
 - 컴포넌트 기반 아키텍처를 제공하여 UI를 작은 단위로 나누어 재사용 가능하게 하고, 유지보수성과 확장성을 극대화합니다. 또한 Virtual DOM을 활용해 효율적인 렌더링 성능을 제공합니다.
@@ -358,73 +331,69 @@ MENTIONED UI
 
 ### Stack
 
-`Spring Boot`
+**`Spring Boot`**
 
 - 설정이 간소화되어 있어 빠른 프로젝트 생성이 가능했고, 내장된 톰캣 서버로 간편한 애플리케이션 배포를 할 수 있습니다.
 - 두 백엔드 팀원의 주 스택이 Spring Boot이기 때문에 선택하게 되었습니다.
 
-`MySQL`
+**`MySQL`**
 
 - 관계형 데이터베이스로, 데이터의 일관성과 무결성을 보장합니다.
 - 대규모 데이터 저장 및 관리에 적합하며, 다양한 쿼리 기능을 제공합니다.
 
-`Redis`
+**`Redis`**
 
 - 인메모리 데이터베이스로 빠른 읽기 및 쓰기 성능을 제공합니다.
 - 리프레시 토큰 등을 저장하고, 실시간 데이터 처리를 위해 선택했습니다.
 
-`JUnit`
+**`JUnit`**
 
 - 자바 애플리케이션이 단위 테스트를 위해 사용합니다.
 - 배포에서의 안정성을 위한 테스트 코드 작성을 위하여 선택했습니다.
 
-`Docker`
+**`Docker`**
 
 - 애플리케이션을 컨테이너화하여 일관된 실행 환경을 제공합니다.
 - 배포 및 확장이 용이하며, 개발, 테스트, 배포의 효율성을 높이기에 선택했습니다.
 
-`JPA`
+**`JPA`**
 
 - 자바 애플리케이션에서 데이터베이스와의 상호작용을 단순화합니다.
 - ORM 기능을 지원하고, 데이터베이스 독립성을 제공하여 선택했습니다.
 
-`Spring Security`
+**`Spring Security`**
 
 - 애플리케이션의 인증 및 인가를 관리합니다.
 - 다양한 보안 기능을 간단한 설정을 통해 진행할 수 있어 선택했습니다.
 
-`Jacoco`
+**`Jacoco`**
 
 - 코드 커버리지 도구로, 테스트가 코드의 어떤 부분을 실행했는지 확인할 수 있으며, 시각화를 통해 테스트 범위를 측정할 수 있습니다.
 - 테스트 코드 작성 시의 더욱 안전한 애플리케이션을 구성하기 위하여 선택했습니다.
 
-`SonarCloud`
-
-- 코드 품질과 보안 분석을 제공하여 코드의 결함을 사전에 발견하고 수정할 수 있게 도와줍니다.
-- 지속적인 품질 관리를 CI를 통해 간편하고 빠르게 확인하고 설정할 수 있어 선택했습니다.
-
-`Sentry`
+**`Sentry`**
 
 - 애플리케이션의 오류 추적 및 모니터링 도구로, 실시간으로 오류를 감지하고 보고합니다.
 - 에러를 빠르게 확인할 수 있어 문제 발생 시 해결 시간을 단축할 수 있어 선택했습니다.
 
-`Github Action`
+**`Github Action`**
 
 - CI/CD 파이프라인을 자동화하여 코드 배포를 효율적으로 관리합니다. 다양한 이벤트 기반 워크플로우를 지원합니다.
 - 다른 CI/CD 도구에 비하여 간편하게 설정 가능하고 다양한 동작을 수행할 수 있어 선택했습니다.
 
-`Terraform`
+**`Terraform`**
 
 - 다중 클라우드 배포 환경에서 선언적 구문을 통해 인프라의 현재 상태를 추적하고 효율적으로 관리할 수 있습니다.
 - 배포환경에 대하여 상태관리 및 자동화를 통해 효율적이고 일관된 인프라 관리를 하기 위하여 선택했습니다.
 
 ### ERD
 
-![ERD (1).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/0b25dfa6-a052-4b92-a733-a7270f32d0fd/ERD_(1).png)
+![image](https://github.com/user-attachments/assets/33934494-aa59-4f84-ba94-1b989f4673e1)
 
 ### Architecture
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a6a0f8d2-278f-4d91-bdc4-d7fb5cff8a5f/e822e086-03fb-4030-b222-a28e32294b8d/image.png)
+![image](https://github.com/user-attachments/assets/cee29b8b-976e-4842-89bd-96ade633f349)
+
 
 ### Convention
 
@@ -497,50 +466,3 @@ feat : 구현한 내용
 
 ```
 
-### Directory Structure
-```json
-src
-├── main
-│   ├── java
-│   │   └── gigedi
-│   │       └── dev
-│   │            ├── domain
-│   │            │   ├── archive
-│   │            │   │   ├── api
-│   │            │   │   ├── application
-│   │            │   │   ├── dao
-│   │            │   │   ├── domain
-│   │            │   │   └── dto
-│   │            │   ├── auth
-│   │            │   ├── block
-│   │            │   ├── config
-│   │            │   ├── discord
-│   │            │   ├── figma
-│   │            │   ├── file
-│   │            │   ├── member
-│   │            │   └── shoot
-│   │            ├── global
-│   │            │   ├── common
-│   │            │   │    ├── constants
-│   │            │   │    └── response
-│   │            │   ├── config
-│   │            │   ├── error
-│   │            │   │    └── exception
-│   │            │   ├── interceptor
-│   │            │   ├── security
-│   │            │   └── util
-│   │            ├── infra
-│   │            │   └── config
-│   │            │   │    ├── jwt
-│   │            │   │    ├── oauth
-│   │            │   │    └── redis
-│   └── resources
-│       ├── application.yaml
-│       ├── application-local.yaml
-│       ├── application-dev.yaml
-│       ├── application-datasource.yaml
-│       ├── application-redis.yaml
-│       ├── application-log.yaml
-│       ├── application-security.yaml
-│       └── logback-spring.xml
-```
