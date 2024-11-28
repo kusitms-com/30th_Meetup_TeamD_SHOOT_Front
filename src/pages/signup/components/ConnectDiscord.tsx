@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 const ConnectDiscord = () => {
     
     const handleDiscordLogin = () => {
-        window.location.href = 'https://discord.com/oauth2/authorize?client_id=1303669235402407958&permissions=2096&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Flogin%2Fdiscord&integration_type=0&scope=email+identify+bot';
+        const discordURL=import.meta.env.VITE_DISCORD_URL;
+        window.location.href = discordURL;
     };
 
     return (

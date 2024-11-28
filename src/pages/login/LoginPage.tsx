@@ -9,7 +9,8 @@ const LoginPage: React.FC = () => {
     const navigate = useNavigate();
 
     const handleGoogleLogin = () => {
-        window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?client_id=354662253053-amfnieo2m0ohp831hr6i0a1mhveidqp8.apps.googleusercontent.com&redirect_uri=http://localhost:5173/login&response_type=code&scope=openid email profile&access_type=offline'
+        const googleURL = import.meta.env.VITE_GOOGLE_URL;
+        window.location.href = googleURL;
     };
 
     return (

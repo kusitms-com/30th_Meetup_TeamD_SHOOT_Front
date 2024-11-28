@@ -5,7 +5,8 @@ import shootLogo from '../../../../public/images/shoot/shootLogo.png';
 const ConnectFigma: React.FC = () => {
 
     const handleFigmaLogin = () => {
-        window.location.href = 'https://www.figma.com/oauth?client_id=OSEOcfCVk52Uci4uNnFRb9&redirect_uri=http://localhost:5173/login/figma&scope=file_read&state=STATE_STRING&response_type=code';
+        const figmaURL=import.meta.env.VITE_FIGMA_URL;
+        window.location.href = figmaURL;
     };
 
     return (
